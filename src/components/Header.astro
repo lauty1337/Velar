@@ -1,40 +1,40 @@
 ---
-import ProcessIcon from '../components/icons/ProcessIcon.astro';
-import ServiceIcon from '../components/icons/ServiceIcon.astro';
-import StarIcon from '../components/icons/StarIcon.astro';
+
 ---
 
 
 
 <header class=" text-white/90 font-semibold w-full">
-    <div class="mx-auto max-w-7xl px-3 flex justify-between items-center  py-6">
+    <div class="mx-auto max-w-6xl px-3 flex justify-between items-center  py-5">
+
             <a href="#hero" class="text-[32px] hover:scale-110 transition-transform duration-300">
                 webify
             </a>
-        <nav>
-            <ul class="flex items-center justify-center gap-x-6 text-[16px] ">
+
+        <nav aria-label="Menu de navegacion principal">
+            <ul class="flex items-center justify-center gap-x-4 text-[15px] ">
                 <li>
-                    <a href="" aria-label="Ir a la seccion de los servicios" class=" gap-x-2 flex items-center border border-transparent hover:bg-gray-400/5 hover:border-white/10 rounded-lg px-4 py-2 transition-all duration-300">
-                        <ServiceIcon class="size-6.5 "/>
+                    <a href="" aria-label="Ir a la seccion de los servicios" class=" flex items-center border border-transparent hover:bg-gray-400/5 hover:border-white/10 rounded-lg px-4 py-2 transition-all duration-200">
                         Servicios
                     </a>
                 </li>
                 <li>
-                    <a href="" aria-label="Ir a la seccion del procedimiento" class=" flex gap-x-2 items-center border border-transparent hover:bg-gray-400/5 hover:border-white/10 rounded-lg px-4 py-2 transition-all duration-300">
-                        <ProcessIcon class="size-6.5 "/>
+                    <a href="" aria-label="Ir a la seccion del procedimiento" class=" flex items-center border border-transparent hover:bg-gray-400/5 hover:border-white/10 rounded-lg px-4 py-2 transition-all duration-200">
                         Procedimiento
                     </a>
                 </li>
                 <li>
-                    <a href="" aria-label="Ir a la seccion de por que nosotros." class="flex items-center gap-x-2 border border-transparent hover:bg-gray-400/5 hover:border-white/10 rounded-lg px-4 py-2 transition-all duration-300">
-                        <StarIcon class="size-6.5 "/>
+                    <a href="" aria-label="Ir a la seccion de por que nosotros." class="flex items-center border border-transparent hover:bg-gray-400/5 hover:border-white/10 rounded-lg px-4 py-2 transition-all duration-200">
                         ¿Por que nosotros?
+                    </a>
+                </li>
+                <li>
+                    <a href="" aria-label="Ir a seccion de contacto" class=" flex border border-blue-700/30 shadow-2xl shadow-blue-700/20 bg-blue-700 px-4 py-2 rounded-lg hover:bg-blue-600/80 hover:-translate-y-0.5 hover:shadow-blue-700/40 transition-all duration-200">
+                        Inicia tu proyecto
                     </a>
                 </li>
             </ul>
         </nav>
-    <a href="" aria-label="Ir a seccion de contacto" class="border border-white/10 shadow-2xl bg-white/10 px-4 py-2 rounded-lg hover:bg-white/15 hover:border-white/20 hover:-translate-y-0.5 transition-all duration-300">
-        Inicia tu proyecto
-    </a>
+    
     </div>
 </header>

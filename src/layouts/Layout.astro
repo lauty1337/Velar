@@ -15,14 +15,24 @@ import Footer from '../components/Footer.astro';
 
 		<meta
 			name="description"
-			content="Agencia de desarrollo web front-end y diseo UI. Creamos sitios web modernos, responsivos y atractivos para impulsar tu presencia dentro del mundo digital."
+			content="Agencia de desarrollo web front-end y diseño UI. Creamos sitios web modernos, responsivos y atractivos para impulsar tu presencia dentro del mundo digital."
+		/>
+		<meta
+			name="author"
+			content="Lautaro Sanchez Visser"
+		/>
+		<meta
+			name="keywords"
+			content="Desarrollo Web, pagina web, Agencia Web, Front-End, Sitios Responsivos, HTML, CSS, JavaScript, Experiencia de Usuario, Diseño UI, Webify"
 		/>
 
 
 	</head>
 	<body class="bg-azure-depths font-sans antialiased ">
 	<Header />
+	<main class="w-full text-white/90 mx-auto">
 		<slot />
+	</main>
 	<Footer />
 	</body>
 </html>

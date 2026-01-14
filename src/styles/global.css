@@ -2,10 +2,13 @@
 
 @theme {
     --font-sans: "Plus Jakarta Sans Variable", system-ui, sans-serif;
+    --font-serif: "Playfair Display Variable", serif;
 }
 
 .bg-azure-depths {
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
   background:
     radial-gradient(
       ellipse 80% 60% at 50% 0%,
@@ -15,10 +18,10 @@
     #000000;
 }
 @layer utilities {
-  .text-gradient-badge {
-    @apply bg-linear-to-tl from-emerald-900 via-fuchsia-50 to-slate-800 bg-clip-text text-transparent;
-  }
   .text-gradient-hero {
-    @apply bg-linear-to-tr from-orange-200 via-purple-100 to-emerald-900 bg-clip-text text-transparent;
+    @apply bg-linear-to-tl from-transparent via-stone-200 to-slate-50 bg-clip-text text-transparent;
+  }
+  .text-gradient-subtitle {
+    @apply bg-linear-to-br from-blue-900 via-blue-600 to-cyan-100 bg-clip-text text-transparent;
   }
 }
