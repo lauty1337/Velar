@@ -2,19 +2,32 @@
 import Layout from '../layouts/Layout.astro';
 import HeroSection from '../components/HeroSection.astro';
 import '@fontsource-variable/playfair-display';
+import WebIcon from '../components/icons/WebIcon.astro';
 ---
 
 <Layout>
     <HeroSection />
-        <section class="max-w-6xl mx-auto">
-            <p class="text-gradient-subtitle text-lg opacity-">
+        <section class="max-w-6xl mx-auto py-4 px-3">
+            <div class="text-center gap-">
+            <p class="text-gradient-subtitle text-lg mb-3">
                 Nuestros Servicios
             </p>
-            <h2 class="text-3xl font-bold opacity-90 my-3">
+            <h2 class="text-4xl font-bold opacity-90 mb-5">
                 Servicios diseñados para generar resultados
             </h2>
-            <p class="text-gray-50/60 leading-relaxed max-w-md mb-9">
-                Diseño y desarrollo web de alto impacto, enfocados en conversion, rendimiento y crecimiento
-            </p>
+            </div>
+            <div class="grid justify-center md:grid-cols-3 gap-6 mt-10 ">
+                <article class="size-100 border border-white/5 bg-white/5 rounded-4xl shadow-2xl shadow-white/5 hover:-translate-y-1 p-12 hover:border-blue-400/15 hover:shadow-blue-400/10 transition-all duration-200 flex flex-col ">
+                    <header>
+                        <WebIcon class ="size-10"/>
+                        <h3>
+                            Landing Pages y Sitios Web Profesionales
+                        </h3>
+                        <p>
+                            Páginas web front-end modernas para presentar tu marca y convertir visitas en clientes. Sin bases de datos ni e-commerce.
+                        </p>
+                    </header>
+                </article>
+            </div>
         </section>
 </Layout>
