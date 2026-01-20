@@ -1,0 +1,55 @@
+---
+
+import ServiceCard from "./ServiceCard.astro";
+
+const service = [
+    {
+        id: 'landing-pages',
+        title: 'Landing Page de Alta Conversion',
+        description: 'Pagina web optimizada para velocidad, SEO y experiencia de usuario perfecta en todos los dispositivos.',
+        price: 100,
+        currency: 'USD',
+        features: [
+            'Diseño responsive premium y personalizado',
+            'SEO optimizado desde dia 1',
+            'Velocidad de carga < 2 segundos',
+            'Formulario de contacto integrado',
+        ],
+        icon: 'web'
+    }
+    ,
+    {
+        id: 'web-redesigb',
+        title: 'Rediseño y Optimización Web',
+        description: 'Migramos y rediseñamos desde cualquier plataforma sin perder tu contenido ni posicionamiento.',
+        price: 70,
+        currency: 'USD',
+        features: [
+            'Mejora de velocidad hasta 10x',
+            'Diseño moderno y atractivo',
+            'Optimización SEO y velocidad',
+            'Integración con herramientas existentes'
+        ],
+        icon: 'construction'
+
+    }
+]
+---
+
+<section class="max-w-6xl mx-auto py-4 px-3">
+    <header class="text-center">
+        <p class="text-gradient-subtitle text-lg mb-3 ">
+            Nuestros servicios
+        </p>
+        <h2 class="text-4xl font-bold opacity-90 mb-5">
+            Servicios diseñados para generar resultados
+        </h2>
+    </header>
+    <div class="grid  md:grid-cols-2 gap-8 mt-10 ">
+        {service.map((service) => (
+            <ServiceCard {...service} />
+        ))}
+
+    </div>
+
+</section>

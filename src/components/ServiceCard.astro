@@ -1,0 +1,55 @@
+---
+import TickIcon from '../components/icons/TickIcon.astro';
+import WebIcon from '../components/icons/WebIcon.astro';
+import ConstructionIcon from '../components/icons/ConstructionIcon.astro';
+
+
+
+const { title, description, features, price, icon, currency} = Astro.props;
+
+const safeFeatures = Array.isArray(features) ? features : [];
+
+const icons = new Map([
+  ["web", WebIcon],
+  ["construction", ConstructionIcon],
+]);
+
+const SelectedIcon = icons.get(icon) || WebIcon;
+---
+
+<article class="w-full border border-white/5 bg-white/5 rounded-4xl shadow-2xl shadow-white/5 hover:-translate-y-1 p-12 hover:border-blue-400/15 hover:shadow-blue-400/10 transition-all duration-200 flex flex-col h-full ">
+                    <header>
+                        <SelectedIcon class ="size-10 text-blue-500"/>
+                        <h3 class="text-lg font-semibold my-4 text-balanced">
+                            {title}
+                        </h3>
+                        <p class="text-gray-50/60 leading-relaxed">
+                            {description}
+                        </p>
+                    </header>
+
+                    <main>
+                        <ul class="mt-6 flex flex-col gap-4 text-white/80">
+                            {safeFeatures.map((feature) => (
+                                <li class="flex items-start gap-x-2">
+                                    <TickIcon class="mt-1 inline-block size-4 shrink-0 text-blue-500" />
+                                    <span class="leading-relaxed">{feature}</span>
+                                </li>
+                            ))}
+                        </ul>
+                        <span class="my-6 block h-px w-full bg-linear-to-r from-blue-500/30 via-blue-500/20 to-transparent"></span>
+                    </main>
+
+                    <footer class="flex flex-col">
+                        <p class="text-gray-50/60 text-sm items-center ">
+                            <span class="text-3xl text-white">${price}</span> 
+                            {currency}
+                        </p>
+                        <a href="" class="text-white/90 border border-white/5 p-5 mt-5 rounded-lg text-center  shadow-xl hover:bg-white/5 hover:shadow-white/5 hover:shadow-2xl transition-all duration-200"
+                        >
+                            Cotizar servicio
+                        </a>
+                    </footer>
+
+
+                </article>
