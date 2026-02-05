@@ -1,9 +1,20 @@
 ---
+import DiscountIcon from "./icons/DiscountIcon.astro"
 import VelarIcon from "./icons/VelarIcon.astro"
 ---
 
-<header role="banner" id="header" class="font-semibold max-w-6xl mx-auto sticky px-4  top-2 backdrop-blur-xl z-50 bg-white/80 border border-gray-400/30 rounded-2xl">
-    <div class=" px-5 flex justify-between items-center py-3">
+<div class="top-2 sticky z-50">
+    <div class="mx-auto max-w-6xl px-4 pt-2 ">
+        <p class="flex justify-center items-center gap-x-1 bg-blue-600 rounded-t-full py-1.5 text-xs text-white font-semibold">
+            <DiscountIcon class="size-4"/>
+            40% OFF limitado a los primeros 5 proyectos
+        </p>
+    </div>
+</div>
+
+
+<header role="banner" id="header" class="font-semibold max-w-6xl mx-auto sticky px-2 top-11 backdrop-blur-xl z-80 bg-white/80 border border-gray-400/30 rounded-b-3xl">
+    <div class=" px-5 flex justify-between items-center py-2">
 
         <div>
             <a href="#hero" aria-label="Velar - Inicio" class=" flex items-center hover:text-black/70 transition-colors duration-300">
@@ -35,7 +46,7 @@ import VelarIcon from "./icons/VelarIcon.astro"
             </ul>
         </nav>
 
-            <a href="" class=" flex border text-white border-blue-500/30 shadow-2xl shadow-blue-700/40 bg-blue-700 px-5 py-1.5 rounded-lg hover:bg-blue-700/90 hover:scale-105  transition-all duration-200">
+            <a href="#contact" class=" flex border text-white border-blue-500/30 shadow-2xl shadow-blue-700/40 bg-blue-700 px-5 py-1 rounded-3xl hover:bg-blue-700/90 hover:scale-105  transition-all duration-200">
                     Contacto
             </a>
 
