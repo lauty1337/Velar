@@ -1,13 +1,79 @@
-<section class="py-16 scroll-mt-18.75" id="contact">
+---
+import WhatsAppIcon from "./icons/WhatsAppIcon.astro"
+import RightArrowIcon from "./icons/RightArrowIcon.astro"
+import MailIcon from "./icons/MailIcon.astro"
+---
+
+
+
+
+<section class="py-16 scroll-mt-18.75 " id="contact">
     <header class="text-center">
-        <p class="text-blue-500 font-semibold text-lg">Contacto</p>
-        <h2 class="text-6xl font-bold mb-5">Empezemos a trabajar juntos</h2>
+        <p class="text-blue-500 font-light text-lg tracking-widest">Contacto</p>
+        <h2 class="text-6xl font-bold mb-5">Hagamos una web unica juntos.</h2>
+        <p class="text-gray-600">Hablemos de tu idea y empecemos a construir una web que te ayude a crecer</p>
     </header>
-    <div class="max-w-6xl grid grid-cols-2 gap-8">
-        
-        <div>
+
+    <!--Layout Bento Grid -->
+    <div class="max-w-5xl min-h-[50dvh] mx-auto grid grid-cols-[1fr_0.9fr] grid-rows-[1fr_1fr]    gap-4 px-4">
+
+
+        <!--Formulario -->
+        <div class="border border-gray-500/20 bg-gray-300/10 rounded-xl row-span-2 p-6">
+            <header>
+                <h3 class="font-bold">
+                    Iniciemos tu proyecto
+                </h3>
+                <p>
+
+                </p>
+            </header>
+            <form action="">
+
+            </form>
+        </div>
+
+        <div class="border border-gray-500/20 bg-gray-300/10 rounded-xl p-6 space-y-3">
+            <header>
+                <h3 class="font-bold text-xl mb-2">
+                    Contacto directo
+                </h3>
+                <p class="text-gray-600 text-sm">
+                    Respuesta en menos de 20 minutos
+                </p>
+            </header>
+            <ul class="space-y-4">
+                <!--WhatsApp-->
+                <li>
+                    <a href="https://wa.me/5492364373183?text=Hola%20quiero%20hacer%20una%20consulta" class="flex items-center gap-x-2 bg-emerald-500/10 rounded-xl p-2 w-76 group hover:bg-emerald-500/20 transition-all duration-200">
+                        <div class="p-2 bg-emerald-500/30 rounded-2xl shrink-0">
+                            <WhatsAppIcon class="size-6 text-emerald-500" />
+                        </div>
+                        <span class="text-sm font-semibold text-emerald-700 min-w-0">
+                            +54 2364-3731-83
+                        </span>
+                        <RightArrowIcon class="size-6 text-emerald-700 shrink-0 ml-auto group-hover:translate-x-1 transition-all duration-200" />
+                    </a>
+                </li>
+                <!--Email-->
+                <li>
+                    <a href="mailto:velarbusinesss@gmail.com" class="flex items-center gap-x-2 bg-blue-500/10 rounded-xl p-2 w-76 group hover:bg-blue-500/20 transition-all duration-200">
+                        <div class="p-2 bg-blue-500/30 rounded-2xl shrink-0">
+                            <MailIcon class="size-6 text-blue-500" />
+                        </div>
+                        <span class="text-sm font-semibold text-blue-700 min-w-0 ">
+                            velarbusinesss@gmail.com
+                        </span>
+                        <RightArrowIcon class="size-6 text-blue-700 shrink-0 ml-auto group-hover:translate-x-1 transition-all duration-200" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bg-blue-700">
 
         </div>
+
         
     </div>
 </section>

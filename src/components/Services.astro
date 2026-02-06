@@ -44,7 +44,7 @@ const service = [
 <section class="bg-gray-300/10 py-16 px-4 border-b scroll-mt-6 border-gray-400/20" id="services">
     <div class="max-w-6xl mx-auto">
         <header class="text-center">
-            <p class="text-blue-500 font-semibold text-lg ">
+            <p class="text-blue-500 font-light tracking-widest text-lg ">
                 Servicios
             </p>
             <h2 class="text-6xl font-bold mb-5">
@@ -54,7 +54,7 @@ const service = [
                 Oferta especial de lanzamiento: <span class="text-blue-600 font-bold">40% de descuento</span> para los primeros 5 clientes
             </p>
         </header>
-        <div class="grid md:grid-cols-2 gap-8 mt-10 ">
+        <div class="grid md:grid-cols-2 max-w-4xl mx-auto gap-8 mt-10 ">
             {service.map((service) => (
                 <ServiceCard {...service} />
             ))}
