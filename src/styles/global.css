@@ -8,6 +8,17 @@
   --font-serif: 'Orbitron Variable', sans-serif;
 }
 
+/* Evitar texto invisible durante la carga de fonts */
+@font-face {
+  font-family: 'Plus Jakarta Sans Variable';
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Orbitron Variable';
+  font-display: swap;
+}
+
 [data-reveal] {
   opacity: 0;
   transform: translateY(20px);
