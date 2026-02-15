@@ -3,8 +3,6 @@ import TickIcon from '../components/icons/TickIcon.astro';
 import WebIcon from '../components/icons/WebIcon.astro';
 import ConstructionIcon from '../components/icons/ConstructionIcon.astro';
 
-
-
 const { title, description, features, originalPrice, discountPrice, discount, icon, currency, featured = false, delay = 0 } = Astro.props;
 
 const safeFeatures = Array.isArray(features) ? features : [];
@@ -17,121 +15,146 @@ const icons = new Map([
 const SelectedIcon = icons.get(icon) || WebIcon;
 ---
 
-                <article data-reveal style={`transition-delay: ${delay * 0.1}s`} class:list={[
-                    "relative border gap-6 rounded-3xl border-black/15 hover:shadow-2xl hover:-translate-y-1 p-8 lg:p-10 grid grid-rows-[auto_1fr_auto_auto]  ease group",
-                    {
-                        "bg-black":featured,
-                        "bg-white/95 ":!featured,
-                    }
-                ]}>
-                    {featured && (
-                        <div class="absolute -top-4  left-1/2 -translate-x-1/2 z-10">
-                            <div class="px-4 py-1 rounded-full bg-linear-to-r from-blue-500 to-blue-700 shadow-xl shadow-blue-500/30">
-                                <span class="text-xs font-bold text-white uppercase tracking-wider">
-                                Más Popular
-                                </span>
-                            </div>
-                        </div>
-                    )}
+<article data-reveal style={`transition-delay: ${delay * 0.1}s`} class:list={[
+    "relative border gap-6 rounded-3xl p-8 lg:p-10 grid grid-rows-[auto_1fr_auto] hover:-translate-y-0.5 hover:shadow-lg group",
+    {
+        "bg-black border-blue-500/20 shadow-sm shadow-blue-500/5 dark:shadow-blue-500/10": featured,
+        "bg-white/95 dark:bg-white/4 border-black/10 dark:border-white/10 hover:border-black/20 dark:hover:border-white/15": !featured,
+    }
+]}>
+    {featured && (
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
+            <div class="px-4 py-1 rounded-full bg-linear-to-r from-blue-500 to-blue-700 shadow-lg shadow-blue-500/25">
+                <span class="text-xs font-bold text-white uppercase tracking-wider">
+                    Más Popular
+                </span>
+            </div>
+        </div>
+    )}
 
-                    <header>
-                        <div class:list={[
-                            "inline-flex p-2 rounded-2xl transition-all duration-200",
-                            {
-                                "bg-gray-500/30 group-hover:bg-gray-400/40 dark:bg-gray-500/30 dark:group-hover:bg-gray-400/40": featured,
-                                "bg-gray-300/40 group-hover:bg-gray-500/30 dark:bg-gray-300/40 dark:group-hover:bg-gray-500/30":!featured,
-                            }
-                        ]}>
-                            <SelectedIcon class:list={[
-                                "size-8",
-                                {
-                                    "text-white": featured,
-                                    "text-black": !featured,
-                                }
-                            ]}/>
-                        </div>
+    <header>
+        <div class:list={[
+            "inline-flex p-3 rounded-2xl transition-colors duration-200",
+            {
+                "bg-blue-500/10 group-hover:bg-blue-500/20": featured,
+                "bg-gray-200/60 group-hover:bg-gray-300/60 dark:bg-white/5 dark:group-hover:bg-white/10": !featured,
+            }
+        ]}>
+            <SelectedIcon class:list={[
+                "size-8",
+                {
+                    "text-blue-400": featured,
+                    "text-black dark:text-white": !featured,
+                }
+            ]}/>
+        </div>
 
-                        <h3 class:list={[
-                            "text-2xl min-h-16 font-semibold my-4 text-balanced",
-                            {
-                                "text-white": featured,
-                                "text-black/90": !featured,
-                            }
-                        ]}>
-                            {title}
-                        </h3>
+        <h3 class:list={[
+            "text-2xl min-h-16 font-semibold my-4 text-balanced",
+            {
+                "text-white": featured,
+                "text-black/90 dark:text-white/90": !featured,
+            }
+        ]}>
+            {title}
+        </h3>
 
-                        <p class:list={[
-                            "leading-relaxed  ",
-                            {
-                                "text-white/80": featured,
-                                "text-gray-700/80": !featured,
-                            }
-                        ]}>
-                            {description}
-                        </p>
-                    </header>
+        <p class:list={[
+            "leading-relaxed",
+            {
+                "text-white/70": featured,
+                "text-gray-600 dark:text-gray-400": !featured,
+            }
+        ]}>
+            {description}
+        </p>
+    </header>
 
-                    <main class="">
-                        <ul class="flex flex-col gap-3 ">
-                            {safeFeatures.map((feature) => (
-                                <li class="flex items-start gap-x-3">
-                                    <TickIcon class="mt-1 inline-block size-5 shrink-0 text-blue-500" />
-                                    <span class:list={[
-                                        "leading-relaxed",
-                                        {
-                                            "text-white": featured,
-                                            "text-black/90": !featured,
-                                        }
-                                    ]}>{feature}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </main>
-                            <span class:list={[
-                                "block h-px  w-full",
-                                {
-                                    "bg-gray-300/20": featured,
-                                    "bg-gray-300/60": !featured,
-                                }
-                            ]}>
-                            </span>
+    <main class="pt-4">
+        <ul class="flex flex-col gap-2.5">
+            {safeFeatures.map((feature) => (
+                <li class="flex items-start gap-x-3">
+                    <TickIcon class:list={[
+                        "mt-0.5 inline-block size-4 shrink-0",
+                        {
+                            "text-blue-400": featured,
+                            "text-blue-500": !featured,
+                        }
+                    ]} />
+                    <span class:list={[
+                        "text-[15px] leading-relaxed",
+                        {
+                            "text-white/80": featured,
+                            "text-gray-700 dark:text-gray-300": !featured,
+                        }
+                    ]}>{feature}</span>
+                </li>
+            ))}
+        </ul>
+    </main>
 
-                    <footer>
-                        <p class="text-gray-500 font-semibold">Desde</p>
+    <footer>
+        <hr class:list={[
+            "border-0 h-px w-full mb-6",
+            {
+                "bg-white/10": featured,
+                "bg-gray-200 dark:bg-white/10": !featured,
+            }
+        ]} />
 
-                        <p class="text-md font-bold items-baseline text-gray-500 flex gap-x-2">
-                            <span class:list={[
-                                "text-4xl font-extrabold",
-                                {
-                                    "text-white": featured,
-                                    "text-black/90": !featured,
-                                }
-                            ]}>${discountPrice}</span> 
+        <p class:list={[
+            "text-sm font-medium mb-1",
+            {
+                "text-gray-400": featured,
+                "text-gray-500": !featured,
+            }
+        ]}>Desde</p>
 
-                            /{currency}
+        <div class="flex items-baseline gap-x-2">
+            <span class:list={[
+                "text-4xl font-extrabold tracking-tight",
+                {
+                    "text-white": featured,
+                    "text-black/90 dark:text-white/90": !featured,
+                }
+            ]}>${discountPrice}</span>
 
-                            <span class="line-through">${originalPrice}</span>
+            <span class:list={[
+                "text-sm font-medium",
+                {
+                    "text-gray-400": featured,
+                    "text-gray-500": !featured,
+                }
+            ]}>/{currency}</span>
 
-                            <span class:list={[
-                                "rounded py-0.5 px-1 text-sm  ",
-                                {
-                                    "bg-blue-600 text-white  ":featured,
-                                    "bg-blue-200 text-blue-600 ":!featured,
-                                }
-                            ]}>-{discount}%</span>
-                        </p>
+            <span class:list={[
+                "text-sm line-through",
+                {
+                    "text-gray-500": featured,
+                    "text-gray-400": !featured,
+                }
+            ]}>${originalPrice}</span>
 
-                        <p class="mt-3 text-gray-500 ">Precio regular: <span class="font-bold text-gray-500/40">${originalPrice} USD</span></p>
+            <span class:list={[
+                "rounded-md py-0.5 px-1.5 text-xs font-bold",
+                {
+                    "bg-blue-500/20 text-blue-300": featured,
+                    "bg-blue-100 text-blue-600 dark:bg-blue-500/15 dark:text-blue-400": !featured,
+                }
+            ]}>-{discount}%</span>
+        </div>
 
-                        <a href="#contact" class:list={[
-                            "text-black/90 font-semibold border flex p-4 mt-5 rounded-lg text-center group justify-center items-center transition-all  duration-200",
-                            {
-                                " bg-white  hover:bg-white/70": featured,
-                                "border-gray-700/15 bg-gray-500/20 hover:bg-gray-500/50 hover:border-gray-700/20": !featured
-                            }
-                        ]}>
-                            Solicitar cotización
-                        </a>
-                    </footer>
-                </article>
+        <a href="#contact" class:list={[
+            "font-semibold border flex p-4 mt-6 rounded-2xl text-center justify-center items-center gap-2 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2",
+            {
+                "bg-blue-600 text-white border-blue-600 hover:bg-blue-700 hover:border-blue-700 focus-visible:ring-offset-black": featured,
+                "border-black/15 text-black/90 bg-transparent hover:bg-gray-100 hover:border-black/25 dark:border-white/15 dark:text-white dark:hover:bg-white/5 dark:hover:border-white/25 dark:focus-visible:ring-offset-gray-900": !featured,
+            }
+        ]}>
+            Solicitar cotización
+            <svg class="size-4 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+        </a>
+    </footer>
+</article>

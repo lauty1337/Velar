@@ -18,10 +18,10 @@
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-
 [data-reveal].visible {
     opacity: 1;
     transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease, translate 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.2s ease-out;
 }
 
 [data-reveal-delay="1"] { transition-delay: 0.1s; }
