@@ -1,56 +1,169 @@
 ---
-import DiscountIcon from "../icons/DiscountIcon.astro"
-import VelarIcon from "../icons/VelarIcon.astro"
-import ThemeToggle from "../ThemeToggle.astro"
+import DiscountIcon from '../icons/DiscountIcon.astro'
+import VelarIcon from '../icons/VelarIcon.astro'
+import ThemeToggle from '../ThemeToggle.astro'
 ---
 
-<div class="top-1 sticky z-50">
-    <div class="mx-auto max-w-6xl px-4 pt-2 ">
-        <p class="flex justify-center items-center gap-x-1 bg-blue-600  rounded-t-2xl py-1.5 text-xs text-white font-semibold">
-            <DiscountIcon class="size-4"/>
-            40% OFF limitado a los primeros 5 proyectos
-        </p>
-    </div>
+<div class="w-full sticky z-50 top-0 md:top-1">
+  <div class="w-full md:mx-auto md:max-w-6xl md:px-4 md:pt-2">
+    <p
+      class="flex justify-center items-center gap-x-1 bg-blue-600 md:rounded-t-2xl py-1.5 md:py-1.5 px-2 text-[11px] sm:text-xs text-white font-semibold text-center h-9 md:h-auto"
+    >
+      <DiscountIcon class="size-4 shrink-0" />
+      <span class="truncate">40% OFF limitado a los primeros 5 proyectos</span>
+    </p>
+  </div>
 </div>
 
+<header
+  role="banner"
+  id="header"
+  class="font-semibold w-full md:max-w-6xl mx-auto sticky px-3 sm:px-4 top-9 md:top-10 backdrop-blur-md z-40 bg-white/80 border border-gray-400/40 md:rounded-b-3xl dark:bg-[#121212]/80 dark:border-gray-400/20"
+>
+  <div class="flex justify-between items-center py-2 gap-2 min-w-0">
+    <a
+      href="#hero"
+      aria-label="Velar - Inicio"
+      class="flex items-center hover:text-black/70 dark:hover:text-white/70 transition-colors duration-300 shrink-0"
+    >
+      <VelarIcon class="size-8 sm:size-10 w-auto" />
+      <span
+        class="text-xl sm:text-[28px] hidden sm:block leading-relaxed font-serif font-light ml-1"
+        >Velar</span
+      >
+    </a>
 
-<header role="banner" id="header" class="font-semibold max-w-6xl mx-auto sticky px-2 top-10 backdrop-blur-md z-80 bg-white/80 border border-gray-400/40 rounded-b-3xl dark:bg-[#121212]/80 dark:border-gray-400/20">
-    <div class=" px-5 flex justify-between items-center py-2">
+    <nav
+      id="main-nav"
+      role="navigation"
+      aria-label="Menú de navegación principal"
+      class="flex max-md:flex-col max-md:absolute max-md:left-0 max-md:right-0 max-md:top-full max-md:mt-0 max-md:py-4 max-md:px-4 max-md:gap-1 max-md:bg-white/95 max-md:dark:bg-[#121212]/95 max-md:backdrop-blur-md max-md:border-t max-md:border-gray-200 max-md:dark:border-gray-700 max-md:shadow-lg md:flex-row gap-x-2 text-sm sm:text-[15px] max-md:opacity-0 max-md:pointer-events-none max-md:-translate-y-2 transition-all duration-300 ease-out"
+    >
+      <ul class="flex max-md:flex-col max-md:w-full gap-x-2 max-md:gap-0">
+        <li>
+          <a
+            href="#services"
+            class="nav-link flex justify-center border border-transparent opacity-70 hover:bg-black/5 dark:hover:bg-white/5 hover:opacity-100 rounded-lg px-4 py-2.5 max-md:py-3 transition-all duration-200"
+          >
+            Servicios
+          </a>
+        </li>
+        <li>
+          <a
+            href="#process"
+            class="nav-link flex justify-center border border-transparent opacity-70 hover:bg-black/5 dark:hover:bg-white/5 hover:opacity-100 rounded-lg px-4 py-2.5 max-md:py-3 transition-all duration-200"
+          >
+            Proceso
+          </a>
+        </li>
+        <li>
+          <a
+            href="#about"
+            class="nav-link flex justify-center border border-transparent opacity-70 hover:bg-black/5 dark:hover:bg-white/5 hover:opacity-100 rounded-lg px-4 py-2.5 max-md:py-3 transition-all duration-200"
+          >
+            Sobre mí
+          </a>
+        </li>
+        <li class="md:hidden mt-2 pt-2 border-t border-gray-200 dark:border-gray-700">
+          <a
+            href="#contact"
+            class="nav-link flex justify-center bg-blue-600 text-white rounded-lg px-4 py-3 hover:bg-blue-700 transition-all duration-200"
+          >
+            Contacto
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-        <div>
-            <a href="#hero" aria-label="Velar - Inicio" class=" flex items-center hover:text-black/70 dark:hover:text-white/70 transition-colors duration-300">
-                <VelarIcon class="size-10 w-auto"/>
-                <span class=" text-[28px] leading-relaxed font-serif font-light">Velar</span>
-            </a>
-        </div>
-
-        <nav role="navigation" aria-label="Menú de navegación principal">
-            <ul class="flex gap-x-2 text-[15px] ">
-                <li>
-                    <a href="#services" class="flex justify-center border border-transparent opacity-70 hover:bg-black/5 dark:hover:bg-white/5 hover:opacity-100  rounded-lg px-4 py-2 transition-all duration-200">
-                        Servicios
-                    </a>
-                </li>
-                <li>
-                    <a href="#process" class="flex justify-center border border-transparent opacity-70 hover:bg-black/5 dark:hover:bg-white/5 hover:opacity-100 rounded-lg px-4 py-2 transition-all duration-200">
-                        Proceso
-                    </a>
-                </li>
-                <li>
-                    <a href="#about" class=" flex justify-center border border-transparent opacity-70 hover:bg-black/5 dark:hover:bg-white/5 hover:opacity-100 rounded-lg px-4 py-2 transition-all duration-200">
-                        Sobre mí
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="flex items-center gap-2">
-            <ThemeToggle />
-            <a href="#contact" class=" flex border text-white border-blue-500/30 shadow-md shadow-blue-600/20 bg-blue-700 px-5 py-1 rounded-3xl hover:bg-blue-700/90 hover:scale-105  transition-all duration-200">
-                Contacto
-            </a>
-        </div>
-
+    <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+      <ThemeToggle />
+      <a
+        href="#contact"
+        class="hidden sm:flex border text-white border-blue-500/30 shadow-md shadow-blue-600/20 bg-blue-700 px-4 sm:px-5 py-1.5 sm:py-1 rounded-2xl sm:rounded-3xl hover:bg-blue-700/90 hover:scale-105 transition-all duration-200 text-sm whitespace-nowrap"
+      >
+        Contacto
+      </a>
+      <button
+        type="button"
+        id="menu-toggle"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="main-nav"
+        class="md:hidden p-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+      >
+        <svg
+          id="menu-icon-open"
+          class="size-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+        <svg
+          id="menu-icon-close"
+          class="size-6 hidden"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
     </div>
+  </div>
 </header>
 
+<script>
+  ;(function () {
+    const toggle = document.getElementById('menu-toggle')
+    const nav = document.getElementById('main-nav')
+    const iconOpen = document.getElementById('menu-icon-open')
+    const iconClose = document.getElementById('menu-icon-close')
+    const links = nav?.querySelectorAll('.nav-link')
+
+    function closeMenu() {
+      nav?.classList.add('max-md:opacity-0', 'max-md:pointer-events-none', 'max-md:-translate-y-2')
+      iconOpen?.classList.remove('hidden')
+      iconClose?.classList.add('hidden')
+      toggle?.setAttribute('aria-expanded', 'false')
+      toggle?.setAttribute('aria-label', 'Abrir menú')
+    }
+
+    function openMenu() {
+      nav?.classList.remove(
+        'max-md:opacity-0',
+        'max-md:pointer-events-none',
+        'max-md:-translate-y-2',
+      )
+      iconOpen?.classList.add('hidden')
+      iconClose?.classList.remove('hidden')
+      toggle?.setAttribute('aria-expanded', 'true')
+      toggle?.setAttribute('aria-label', 'Cerrar menú')
+    }
+
+    toggle?.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true'
+      if (expanded) closeMenu()
+      else openMenu()
+    })
+
+    links?.forEach((link) => {
+      link.addEventListener('click', () => {
+        if (window.matchMedia('(max-width: 767px)').matches) closeMenu()
+      })
+    })
+  })()
+</script>

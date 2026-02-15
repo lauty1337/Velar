@@ -1,36 +1,46 @@
 ---
-import DesignIcon from '../components/icons/DesignIcon.astro';
-import LupaIcon from '../components/icons/LupaIcon.astro';
-import CodeIcon from '../components/icons/CodeIcon.astro';
-import RocketIcon from '../components/icons/RocketIcon.astro';
+import DesignIcon from '../components/icons/DesignIcon.astro'
+import LupaIcon from '../components/icons/LupaIcon.astro'
+import CodeIcon from '../components/icons/CodeIcon.astro'
+import RocketIcon from '../components/icons/RocketIcon.astro'
 
-const {step, title, description, icon, delay = 0} = Astro.props
+const { step, title, description, icon, delay = 0 } = Astro.props
 
 const icons = new Map([
-    ["rocket", RocketIcon],
-    ["code", CodeIcon],
-    ["design", DesignIcon],
-    ["lupa", LupaIcon],
+  ['rocket', RocketIcon],
+  ['code', CodeIcon],
+  ['design', DesignIcon],
+  ['lupa', LupaIcon],
 ])
 
-const SelectedIcon = icons.get(icon) || CodeIcon;
+const SelectedIcon = icons.get(icon) || CodeIcon
 ---
 
-
-
-        <li data-reveal style={`transition-delay: ${delay * 0.1}s`} class="relative border border-black/7 dark:border-white/4 dark:bg-black/10 rounded-2xl bg-gray-200/10 p-4 min-h-96">
-            <span aria-hidden="true" class="absolute top-3 right-3 text-6xl font-extrabold font-serif text-blue-500/15 dark:text-blue-500/5 select-none">
-                {step}
-            </span>
-            <div class="relative z-10 flex flex-col h-full items-center">
-                <div class="bg-blue-200/40 dark:bg-blue-900/40 p-2 rounded-2xl w-fit mt-18">
-                    <SelectedIcon class="size-8 text-blue-500" aria-hidden="true" />
-                </div>
-                <h3 class="text-2xl font-bold my-5">
-                    {title}
-                </h3>
-                <p class="text-gray-600 dark:text-gray-400 justify-center text-center">
-                    {description}
-                </p>
-            </div>
-        </li>
+<li
+  data-reveal
+  style={`transition-delay: ${delay * 0.1}s`}
+  class="relative border border-black/7 dark:border-white/4 dark:bg-black/10 rounded-xl sm:rounded-2xl bg-gray-200/10 p-4 sm:p-5 min-h-0 sm:min-h-[18rem] lg:min-h-96"
+>
+  <span
+    aria-hidden="true"
+    class="absolute top-3 right-3 text-4xl sm:text-5xl lg:text-6xl font-extrabold font-serif text-blue-500/15 dark:text-blue-500/5 select-none"
+  >
+    {step}
+  </span>
+  <div class="relative z-10 flex flex-col h-full items-center text-center">
+    <div
+      class="bg-blue-200/40 dark:bg-blue-900/40 p-2 rounded-xl sm:rounded-2xl w-fit mt-12 sm:mt-14 lg:mt-18"
+    >
+      <SelectedIcon
+        class="size-7 sm:size-8 text-blue-500"
+        aria-hidden="true"
+      />
+    </div>
+    <h3 class="text-xl sm:text-2xl font-bold my-4 sm:my-5">
+      {title}
+    </h3>
+    <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed">
+      {description}
+    </p>
+  </div>
+</li>

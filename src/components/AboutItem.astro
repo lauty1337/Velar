@@ -1,25 +1,33 @@
 ---
-
-const {time, title, description, delay = 0} = Astro.props; 
-
+const { time, title, description, delay = 0 } = Astro.props
 ---
 
-<div data-reveal style={`transition-delay: ${delay * 0.1}s`} class="relative pl-8 group">
+<div
+  data-reveal
+  style={`transition-delay: ${delay * 0.1}s`}
+  class="relative pl-6 lg:pl-8 group"
+>
   <!-- Punto centrado en la línea -->
-  <span class="absolute left-1 top-0 size-4 -translate-x-1 rounded-full border border-gray-300 bg-white dark:bg-[#131313] dark:border-gray-300/30 group-hover:border-blue-500 transition-all duration-200"></span>
-  
+  <span
+    class="absolute left-1 top-0 size-4 -translate-x-1 rounded-full border border-gray-300 bg-white dark:bg-[#131313] dark:border-gray-300/30 group-hover:border-blue-500 transition-all duration-200"
+  ></span>
+
   <!-- Card -->
-  <article class="border bg-gray-200/10  border-black/7 dark:bg-black/10 dark:border-white/7 rounded-2xl p-6 ">
-    <span class="text-xs text-gray-400 mb-2 font-medium block group-hover:text-blue-400 transition-colors duration-200">
+  <article
+    class="border bg-gray-200/10 border-black/7 dark:bg-black/10 dark:border-white/7 rounded-2xl p-6"
+  >
+    <span
+      class="text-xs text-gray-400 mb-2 font-medium block group-hover:text-blue-400 transition-colors duration-200"
+    >
       {time}
     </span>
-    
+
     <header>
       <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
         {title}
       </h3>
     </header>
-    
+
     <p class="text-gray-600 text-sm dark:text-gray-300/80 leading-relaxed">
       {description}
     </p>

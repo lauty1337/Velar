@@ -1,56 +1,62 @@
 ---
-import StepItem from "../StepItem.astro"
-
-
-
+import StepItem from '../StepItem.astro'
 
 const steps = [
-    {
-        step: '01',
-        title: 'Consulta inicial',
-        description: 'Conversamos sobre tus objetivos, necesidades y visión. Definimos alcance, tiempo y presupuesto del proyecto.',
-        icon: 'lupa',
-        delay: 1,
-    },
-    {
-        step: '02',
-        title: 'Diseño UI/UX',
-        description: 'Se diseña el proyecto en Figma, donde se puede modificar a gusto hasta que el diseño sea el que estés buscando.',
-        icon: 'design',
-        delay: 2,
-    },
-    {
-        step: '03',
-        title: 'Desarrollo',
-        description: 'Transformamos el diseño en código con tecnologías modernas. Optimizado para velocidad, SEO y una experiencia de usuario única.',
-        icon: 'code',
-        delay: 3,
-    },
-    {
-        step: '04',
-        title: 'Lanzamiento',
-        description: 'Después del testing de la página y deploy. Se te entrega el sitio funcionando sin costo de hosting.',
-        icon: 'rocket',
-        delay: 4,
-    }
+  {
+    step: '01',
+    title: 'Consulta inicial',
+    description:
+      'Conversamos sobre tus objetivos, necesidades y visión. Definimos alcance, tiempo y presupuesto del proyecto.',
+    icon: 'lupa',
+    delay: 1,
+  },
+  {
+    step: '02',
+    title: 'Diseño UI/UX',
+    description:
+      'Se diseña el proyecto en Figma, donde se puede modificar a gusto hasta que el diseño sea el que estés buscando.',
+    icon: 'design',
+    delay: 2,
+  },
+  {
+    step: '03',
+    title: 'Desarrollo',
+    description:
+      'Transformamos el diseño en código con tecnologías modernas. Optimizado para velocidad, SEO y una experiencia de usuario única.',
+    icon: 'code',
+    delay: 3,
+  },
+  {
+    step: '04',
+    title: 'Lanzamiento',
+    description:
+      'Después del testing de la página y deploy. Se te entrega el sitio funcionando sin costo de hosting.',
+    icon: 'rocket',
+    delay: 4,
+  },
 ]
 ---
 
-<section class="py-16 scroll-mt-40" id="process">
-    <div class="max-w-6xl px-4 mx-auto">
-        <header class="text-center">
-            <p class="text-blue-500 font-light tracking-widest text-lg"> Proceso</p>
-            <h2 class="text-6xl font-bold mb-5">Cómo trabajamos juntos</h2>
-            <p class="text-gray-600 dark:text-gray-300">De la idea al lanzamiento en 4 pasos.</p>
-        </header>
+<section
+  class="py-12 sm:py-16 px-4 sm:px-6 scroll-mt-20 sm:scroll-mt-40"
+  id="process"
+>
+  <div class="max-w-6xl mx-auto">
+    <header class="text-center">
+      <p class="text-blue-500 font-light tracking-widest text-sm sm:text-lg">Proceso</p>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-5">
+        Cómo trabajamos juntos
+      </h2>
+      <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base">
+        De la idea al lanzamiento en 4 pasos.
+      </p>
+    </header>
 
-        <ol class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10 gap-8 list-none" aria-label="Pasos del proceso">
-            {
-                steps.map((step) => (
-                    <StepItem {...step} />
-                ))
-            }
-        </ol>
-    </div>
+    <ol
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-8 sm:mt-10 gap-6 sm:gap-8 list-none"
+      aria-label="Pasos del proceso"
+    >
+      {steps.map((step) => <StepItem {...step} />)}
+    </ol>
+  </div>
 </section>
-

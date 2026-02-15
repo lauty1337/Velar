@@ -1,68 +1,65 @@
 ---
+import ServiceCard from '../ServiceCard.astro'
 
-import ServiceCard from "../ServiceCard.astro";
-
-
-const service = [                           
-    {
-        id: 'landing-pages',
-        title: 'Landing Pages, Branding y Portfolios',
-        description: 'Página web optimizada para velocidad, SEO y experiencia de usuario perfecta en todos los dispositivos.',
-        discount: 40,
-        originalPrice: 350,
-        discountPrice: 250,
-        currency: 'USD',
-        features: [
-            'Diseño responsive premium y personalizado',
-            'SEO optimizado desde el día 1',
-            'Velocidad de carga < 2 segundos',
-            'Formulario de contacto integrado',
-        ],
-        icon: 'web',
-        featured: false,
-        delay: 1,
-    },
-    {
-        id: 'web-redesign',
-        title: 'Rediseño y Optimización Web',
-        description: 'Migramos y rediseñamos desde cualquier plataforma sin perder tu contenido ni posicionamiento.',
-        discount: 40,
-        originalPrice:420 ,
-        discountPrice:300 ,
-        currency: 'USD',
-        features: [
-            'Mejora de velocidad hasta 10x',
-            'Diseño moderno y atractivo',
-            'Optimización SEO y velocidad',
-            'Integración con herramientas existentes',
-        ],
-        icon: 'construction',
-        featured: true,
-        delay: 2,
-    }
+const service = [
+  {
+    id: 'landing-pages',
+    title: 'Landing Pages, Branding y Portfolios',
+    description:
+      'Página web optimizada para velocidad, SEO y experiencia de usuario perfecta en todos los dispositivos.',
+    discount: 40,
+    originalPrice: 350,
+    discountPrice: 250,
+    currency: 'USD',
+    features: [
+      'Diseño responsive premium y personalizado',
+      'SEO optimizado desde el día 1',
+      'Velocidad de carga < 2 segundos',
+      'Formulario de contacto integrado',
+    ],
+    icon: 'web',
+    featured: false,
+    delay: 1,
+  },
+  {
+    id: 'web-redesign',
+    title: 'Rediseño y Optimización Web',
+    description:
+      'Migramos y rediseñamos desde cualquier plataforma sin perder tu contenido ni posicionamiento.',
+    discount: 40,
+    originalPrice: 420,
+    discountPrice: 300,
+    currency: 'USD',
+    features: [
+      'Mejora de velocidad hasta 10x',
+      'Diseño moderno y atractivo',
+      'Optimización SEO y velocidad',
+      'Integración con herramientas existentes',
+    ],
+    icon: 'construction',
+    featured: true,
+    delay: 2,
+  },
 ]
 ---
 
-<section class="bg-gray-100/50 dark:bg-gray-900/10 py-16 px-4 border-b border-t scroll-mt-6 border-gray-400/20" id="services">
-    <div class="max-w-6xl mx-auto">
-        <header class="text-center">
-            <p class="text-blue-500 font-light tracking-widest text-lg ">
-                Servicios
-            </p>
-            <h2 class="text-6xl font-bold mb-5">
-                Dos soluciones, resultados reales
-            </h2>
-            <p class="text-gray-600 dark:text-gray-300">
-                Oferta especial de lanzamiento: <span class="text-blue-600 font-bold">40% de descuento</span> para los primeros 5 clientes
-            </p>
-        </header>
-        <div class="grid md:grid-cols-2 max-w-4xl mx-auto gap-8 mt-10 ">
-            {service.map((service) => (
-                <ServiceCard {...service} />
-            ))}
-        </div>
+<section
+  class="bg-gray-100/50 dark:bg-gray-900/10 py-12 sm:py-16 px-4 sm:px-6 border-b border-t scroll-mt-6 border-gray-400/20"
+  id="services"
+>
+  <div class="max-w-6xl mx-auto">
+    <header class="text-center">
+      <p class="text-blue-500 font-light tracking-widest text-sm sm:text-lg">Servicios</p>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-5 px-2">
+        Dos soluciones, resultados reales
+      </h2>
+      <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base max-w-xl mx-auto">
+        Oferta especial de lanzamiento: <span class="text-blue-600 font-bold">40% de descuento</span
+        > para los primeros 5 clientes
+      </p>
+    </header>
+    <div class="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-6 sm:gap-8 mt-8 sm:mt-10">
+      {service.map((service) => <ServiceCard {...service} />)}
     </div>
-
+  </div>
 </section>
-
-

@@ -1,51 +1,94 @@
 ---
-import VelarIcon from "../icons/VelarIcon.astro"
-import GitHubIcon from "../icons/GitHubIcon.astro"
-import InstagramIcon from "../icons/InstagramIcon.astro"
-import LinkedInIcon from "../icons/LinkedInIcon.astro"
+import VelarIcon from '../icons/VelarIcon.astro'
+import GitHubIcon from '../icons/GitHubIcon.astro'
+import InstagramIcon from '../icons/InstagramIcon.astro'
+import LinkedInIcon from '../icons/LinkedInIcon.astro'
 ---
 
-<footer class="border-t bg-gray-200  border-black/10 dark:border-white/10 dark:bg-gray-900/10 pt-8 pb-5">
+<footer
+  class="border-t bg-gray-200 border-black/10 dark:border-white/10 dark:bg-gray-900/10 pt-8 pb-6 sm:pb-5"
+>
+  <div
+    class="max-w-6xl mx-auto flex flex-col sm:flex-row sm:justify-between sm:items-center gap-8 px-4 sm:px-6"
+  >
+    <div class="space-y-4 min-w-0">
+      <h2 class="items-center font-serif flex gap-2">
+        <VelarIcon class="size-8 sm:size-10 shrink-0" />
+        <span class="text-lg sm:text-xl">Velar</span>
+      </h2>
 
-    <div class="max-w-6xl mx-auto flex justify-between items-center px-4 ">
+      <p
+        class="max-w-72 text-black/70 dark:text-gray-300 leading-relaxed font-bold text-xs sm:text-sm"
+      >
+        Soluciones web profesionales que potencian la presencia digital de cada marca.
+      </p>
 
-        <div class="space-y-4">
-
-            <h2 class="items-center font-serif flex">
-                <VelarIcon class="size-10"/>
-                Velar
-            </h2>
-
-            <p class="max-w-72 text-black/70 dark:text-gray-300 leading-relaxed font-bold text-xs">
-                Soluciones web profesionales que potencian la presencia digital de cada marca.
-            </p>
-
-            <ul class="flex gap-x-6 text-gray-700 dark:text-gray-300">
-                <li>
-                    <a href="https://www.linkedin.com/in/lautaro-sanchez-visser-8bb19a338/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="hover:scale-120 transition-all duration-200 inline-block">
-                        <LinkedInIcon />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/lauty1337" aria-label="GitHub" target="_blank" rel="noopener noreferrer" class="hover:scale-120 transition-all duration-200 inline-block">
-                        <GitHubIcon />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/lautyvisser/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                        <InstagramIcon />
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <nav>
-            <ul class="flex md:flex-col gap-y-2 gap-x-3 text-sm text-gray-700 dark:text-gray-300">
-                <li><a href="#services" class="hover:underline hover:decoration-blue-600">Servicios</a></li>
-                <li><a href="#process" class="hover:underline hover:decoration-blue-600">Proceso</a></li>
-                <li><a href="#about" class="hover:underline hover:decoration-blue-600">Sobre mí</a></li>
-                <li><a href="#contact" class="hover:underline hover:decoration-blue-600">Contacto</a></li>
-            </ul>
-        </nav>
+      <ul class="flex gap-x-6 text-gray-700 dark:text-gray-300">
+        <li>
+          <a
+            href="https://www.linkedin.com/in/lautaro-sanchez-visser-8bb19a338/"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:scale-110 transition-transform duration-200 inline-block"
+          >
+            <LinkedInIcon />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/lauty1337"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:scale-110 transition-transform duration-200 inline-block"
+          >
+            <GitHubIcon />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/lautyvisser/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:scale-110 transition-transform duration-200 inline-block"
+          >
+            <InstagramIcon />
+          </a>
+        </li>
+      </ul>
     </div>
+
+    <nav aria-label="Enlaces del sitio">
+      <ul
+        class="flex flex-wrap gap-x-4 gap-y-2 sm:flex-nowrap sm:flex-col sm:gap-y-2 sm:gap-x-0 text-sm text-gray-700 dark:text-gray-300"
+      >
+        <li>
+          <a
+            href="#services"
+            class="hover:underline hover:decoration-blue-600"
+            >Servicios</a>
+        </li>
+        <li>
+          <a
+            href="#process"
+            class="hover:underline hover:decoration-blue-600"
+            >Proceso</a>
+        </li>
+        <li>
+          <a
+            href="#about"
+            class="hover:underline hover:decoration-blue-600"
+            >Sobre mí</a>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="hover:underline hover:decoration-blue-600"
+            >Contacto</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </footer>

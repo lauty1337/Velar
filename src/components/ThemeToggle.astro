@@ -1,7 +1,11 @@
 ---
+
 ---
 
-<div class="relative" id="theme-toggle-wrapper">
+<div
+  class="relative"
+  id="theme-toggle-wrapper"
+>
   <button
     type="button"
     id="theme-toggle-btn"
@@ -11,16 +15,46 @@
     class="flex items-center justify-center size-10 rounded-lg border border-transparent hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-200 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
   >
     <!-- Sun icon (show in dark mode) -->
-    <span id="theme-icon-sun" class="hidden dark:inline-block size-5" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="4"/>
-        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+    <span
+      id="theme-icon-sun"
+      class="hidden dark:inline-block size-5"
+      aria-hidden="true"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          r="4"
+        ></circle>
+        <path
+          d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+        ></path>
       </svg>
     </span>
     <!-- Moon icon (show in light mode) -->
-    <span id="theme-icon-moon" class="inline-block dark:hidden size-5" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+    <span
+      id="theme-icon-moon"
+      class="inline-block dark:hidden size-5"
+      aria-hidden="true"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
       </svg>
     </span>
   </button>
@@ -38,7 +72,10 @@
       data-theme="light"
       class="theme-option w-full text-left px-4 py-2.5 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors flex items-center gap-3 rounded-lg mx-1"
     >
-      <span class="size-4 rounded-full border border-gray-300 dark:border-gray-500 bg-white" aria-hidden="true"></span>
+      <span
+        class="size-4 rounded-full border border-gray-300 dark:border-gray-500 bg-white"
+        aria-hidden="true"
+      ></span>
       Light
     </button>
     <button
@@ -47,7 +84,10 @@
       data-theme="dark"
       class="theme-option w-full text-left px-4 py-2.5 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors flex items-center gap-3 rounded-lg mx-1"
     >
-      <span class="size-4 rounded-full bg-gray-800 border border-gray-700" aria-hidden="true"></span>
+      <span
+        class="size-4 rounded-full bg-gray-800 border border-gray-700"
+        aria-hidden="true"
+      ></span>
       Dark
     </button>
     <button
@@ -56,9 +96,23 @@
       data-theme="system"
       class="theme-option w-full text-left px-4 py-2.5 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors flex items-center gap-3 rounded-lg mx-1"
     >
-      <svg class="size-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-        <rect x="2" y="3" width="20" height="14" rx="2"/>
-        <path d="M8 21h8M12 17v4"/>
+      <svg
+        class="size-4 text-gray-500"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        aria-hidden="true"
+      >
+        <rect
+          x="2"
+          y="3"
+          width="20"
+          height="14"
+          rx="2"
+        ></rect>
+        <path d="M8 21h8M12 17v4"></path>
       </svg>
       System
     </button>

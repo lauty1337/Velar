@@ -1,51 +1,59 @@
 ---
 import '../styles/global.css'
-import '@fontsource-variable/plus-jakarta-sans';
-import '@fontsource-variable/orbitron';
-import Header from '../components/sections/Header.astro';
-import Footer from '../components/sections/Footer.astro';
-
-
+import '@fontsource-variable/plus-jakarta-sans'
+import '@fontsource-variable/orbitron'
+import Header from '../components/sections/Header.astro'
+import Footer from '../components/sections/Footer.astro'
 ---
+
 <!doctype html>
-<html lang="es" class="scroll-smooth" >
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<script is:inline>
-			(function() {
-				var t = localStorage.getItem('theme');
-				var dark = t === 'dark' || (t !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
-				if (dark) document.documentElement.classList.add('dark');
-			})();
-		</script>
-		<title>Velar - Desarrollo Web Front-End y Diseño UI</title>
+<html
+  lang="es"
+  class="scroll-smooth"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <script is:inline>
+      ;(function () {
+        var t = localStorage.getItem('theme')
+        var dark =
+          t === 'dark' ||
+          (t !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        if (dark) document.documentElement.classList.add('dark')
+      })()
+    </script>
+    <title>Velar - Desarrollo Web Front-End y Diseño UI</title>
 
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
 
-		<meta
-			name="description"
-			content="Agencia de desarrollo web front-end y diseño UI. Creamos sitios web modernos, responsivos y atractivos para impulsar tu presencia dentro del mundo digital."
-		/>
-		<meta
-			name="author"
-			content="Lautaro Sánchez Visser"
-		/>
-		
-
-
-	</head>
-	<body class=" bg-[white] text-black dark:bg-[#131313] dark:text-white/90 antialiased">
-	<Header />
-	<main class="w-full mx-auto">
-		<slot />
-	</main>
-	<Footer />
-	<script>
-		import '../scripts/lenis.js'
-		import '../scripts/data-reveal.js'
-	</script>
-	</body>
+    <meta
+      name="description"
+      content="Agencia de desarrollo web front-end y diseño UI. Creamos sitios web modernos, responsivos y atractivos para impulsar tu presencia dentro del mundo digital."
+    />
+    <meta
+      name="author"
+      content="Lautaro Sánchez Visser"
+    />
+  </head>
+  <body
+    class="min-w-0 overflow-x-hidden bg-[white] text-black dark:bg-[#131313] dark:text-white/90 antialiased"
+  >
+    <Header />
+    <main class="w-full mx-auto">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      import '../scripts/lenis.js'
+      import '../scripts/data-reveal.js'
+    </script>
+  </body>
 </html>
-
-

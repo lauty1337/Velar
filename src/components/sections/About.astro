@@ -1,72 +1,80 @@
 ---
-import AboutItem from "../AboutItem.astro"
+import AboutItem from '../AboutItem.astro'
 
 const about = [
-    {
-        time: 'Enfoque',
-        title: 'Fundamentos sólidos',
-        description: 'HTML, CSS y estructura semántica. Priorizo buenas prácticas, sitios claros, rápidos y funcionales desde el primer día.',
-        delay: 1,
-    },
-    {
-        time: 'Stack',
-        title: 'Performance y UI',
-        description: 'Tailwind CSS, optimización de rendimiento y Core Web Vitals. Interfaces modernas y eficientes, con foco en experiencia de usuario y velocidad real.',
-        delay: 2,
-    },
-    {
-        time: 'Objetivo',
-        title: 'Proyectos de nivel profesional',
-        description: 'Landing pages, rediseños y optimización de sitios con estándares de escalabilidad, SEO técnico y calidad visual. Código limpio y entregas cuidadas.',
-        delay: 3,
-    }
+  {
+    time: 'Enfoque',
+    title: 'Fundamentos sólidos',
+    description:
+      'HTML, CSS y estructura semántica. Priorizo buenas prácticas, sitios claros, rápidos y funcionales desde el primer día.',
+    delay: 1,
+  },
+  {
+    time: 'Stack',
+    title: 'Performance y UI',
+    description:
+      'Tailwind CSS, optimización de rendimiento y Core Web Vitals. Interfaces modernas y eficientes, con foco en experiencia de usuario y velocidad real.',
+    delay: 2,
+  },
+  {
+    time: 'Objetivo',
+    title: 'Proyectos de nivel profesional',
+    description:
+      'Landing pages, rediseños y optimización de sitios con estándares de escalabilidad, SEO técnico y calidad visual. Código limpio y entregas cuidadas.',
+    delay: 3,
+  },
 ]
 ---
 
-<section class="bg-gray-100/50 border-t border-b border-gray-400/20 dark:bg-[#131313] py-16 scroll-mt-20" id="about">
-
-    <div class="max-w-6xl px-4 gap-20 mx-auto grid grid-cols-2">
+<section
+  class="bg-gray-100/50 border-t border-b border-gray-400/20 dark:bg-[#131313] py-12 sm:py-16 px-4 sm:px-6 scroll-mt-20"
+  id="about"
+>
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+    <div class="min-w-0">
+      <p class="text-blue-500 font-light tracking-widest text-sm sm:text-base">Sobre mí</p>
+      <header>
+        <h2 class="text-2xl sm:text-3xl font-bold leading-relaxed mt-1">
+          Experiencias web que
+          <span class="text-gray-500">convierten</span>
+        </h2>
+      </header>
+      <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base mt-4">
+        Me especializo en páginas web rápidas, modernas y pensadas para convertir. Cada proyecto lo
+        construyo con diseño claro, estructura profesional y una experiencia que transmita
+        confianza.
+      </p>
+      <p class="text-gray-600 dark:text-gray-300 leading-relaxed my-5 sm:my-7 text-sm sm:text-base">
+        Sin promesas vacías ni plantillas genéricas. Código limpio, tiempos de carga optimizados y
+        decisiones que hacen que tu web se vea profesional, funcione bien y esté lista para crecer.
+        Menos vueltas, más resultados.
+      </p>
+      <dl
+        class="border-t border-gray-400/20 dark:border-white/20 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-x-6 pt-8 sm:pt-10"
+      >
         <div>
-            <p class="text-blue-500 font-light tracking-widest">
-                Sobre mí
-            </p>
-            <header>
-                <h2 class="text-3xl font-bold  leading-relaxed">
-                    Experiencias web que 
-                    <span class="text-gray-500">convierten</span>
-                </h2>
-            </header>
-            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                Me especializo en páginas web rápidas, modernas y pensadas para convertir. Cada proyecto lo construyo con diseño claro, estructura profesional y una experiencia que transmita confianza.
-            </p>
-            <p class="text-gray-600 dark:text-gray-300 leading-relaxed my-7">
-                Sin promesas vacías ni plantillas genéricas. Código limpio, tiempos de carga optimizados y decisiones que hacen que tu web se vea profesional, funcione bien y esté lista para crecer. Menos vueltas, más resultados.
-            </p>
-            <dl class="border-t border-gray-400/20 dark:border-white/20 grid grid-cols-3 gap-x-6">
-                <div class="mt-10">
-                    <dt class="text-xl font-bold text-blue-500">Resultados</dt>
-                    <dd class="text-sm ">Webs pensadas para convertir</dd>
-                </div>
-                <div class="mt-10">
-                    <dt class="text-xl font-bold text-blue-500">Criterio</dt>
-                    <dd class="text-sm ">Nada genérico, todo con intención</dd>
-                </div>
-                <div class="mt-10">
-                    <dt class="text-xl font-bold text-blue-500">Escalabilidad</dt>
-                    <dd class="text-sm ">Listas para crecer con tu negocio</dd>
-                </div>
-            </dl>
+          <dt class="text-lg sm:text-xl font-bold text-blue-500">Resultados</dt>
+          <dd class="text-sm mt-0.5">Webs pensadas para convertir</dd>
         </div>
-
-        <div class="relative">
-            <div class="absolute left-1.75 top-6 bottom-6 w-px bg-gray-200 dark:bg-gray-200/20"> </div>
-                <div class="space-y-6">
-                    {
-                        about.map(about =>
-                            <AboutItem {...about} />
-                        )
-                    }
-                </div>
+        <div>
+          <dt class="text-lg sm:text-xl font-bold text-blue-500">Criterio</dt>
+          <dd class="text-sm mt-0.5">Nada genérico, todo con intención</dd>
         </div>
+        <div>
+          <dt class="text-lg sm:text-xl font-bold text-blue-500">Escalabilidad</dt>
+          <dd class="text-sm mt-0.5">Listas para crecer con tu negocio</dd>
+        </div>
+      </dl>
     </div>
+
+    <div class="relative min-w-0">
+      <div
+        class="absolute left-[7px] top-6 bottom-6 w-px bg-gray-200 dark:bg-gray-200/20 hidden lg:block"
+      >
+      </div>
+      <div class="space-y-6">
+        {about.map((about) => <AboutItem {...about} />)}
+      </div>
+    </div>
+  </div>
 </section>

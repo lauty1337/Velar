@@ -1,246 +1,323 @@
 ---
-import WhatsAppIcon from "../icons/WhatsAppIcon.astro"
-import RightArrowIcon from "../icons/RightArrowIcon.astro"
-import MailIcon from "../icons/MailIcon.astro"
-import CodeIcon from "../icons/CodeIcon.astro"
-import HostingIcon from "../icons/HostingIcon.astro"
-import DesignIcon from "../icons/DesignIcon.astro"
+import WhatsAppIcon from '../icons/WhatsAppIcon.astro'
+import RightArrowIcon from '../icons/RightArrowIcon.astro'
+import MailIcon from '../icons/MailIcon.astro'
+import CodeIcon from '../icons/CodeIcon.astro'
+import HostingIcon from '../icons/HostingIcon.astro'
+import DesignIcon from '../icons/DesignIcon.astro'
 ---
 
+<section
+  data-reveal
+  class="py-12 sm:py-16 px-4 sm:px-6 scroll-mt-15"
+  id="contact"
+>
+  <header class="text-center">
+    <p class="text-blue-500 font-light text-sm sm:text-lg tracking-widest">Contacto</p>
+    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-5">
+      Hagamos una web única juntos.
+    </h2>
+    <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base max-w-xl mx-auto">
+      Hablemos de tu idea y empecemos a construir una web que te ayude a crecer
+    </p>
+  </header>
 
+  <!--Layout Bento Grid -->
+  <div
+    class="max-w-5xl min-h-0 mx-auto grid grid-cols-1 lg:grid-cols-[1.3fr_0.7fr] mt-8 sm:mt-10 gap-6"
+  >
+    <!--Formulario -->
+    <div
+      class="border border-gray-500/20 shadow-xs shadow-gray-500/20 rounded-xl lg:row-span-2 p-5 sm:p-6 min-w-0"
+    >
+      <header class="space-y-2">
+        <h3 class="font-semibold text-xl mb-2 flex items-center gap-x-2">
+          <span class="w-1.5 h-6 bg-blue-500 rounded-full"></span>
+          Iniciemos tu proyecto
+        </h3>
+        <p class="text-gray-600 text-sm dark:text-gray-300">
+          Completa el formulario y nos pondremos en contacto contigo en menos de 20 minutos
+        </p>
+      </header>
 
+      <form
+        id="contact-form"
+        action="https://formspree.io/f/mpqjwqlg"
+        method="POST"
+        class="mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 gap-x-6 sm:gap-x-8 gap-y-6 sm:gap-y-9"
+      >
+        <!--Nombre-->
+        <label class="flex flex-col gap-y-2">
+          <span class="text-xs font-semibold text-gray-600/80 dark:text-gray-300/50"
+            >Nombre completo</span
+          >
+          <input
+            type="text"
+            name="name"
+            placeholder="Tu nombre"
+            class="border-b border-gray-300 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-blue-500 focus:ring-0 transition-colors duration-200 pb-2"
+            required
+          />
+        </label>
 
-<section data-reveal class="py-16 scroll-mt-15 " id="contact">
-    <header class="text-center">
-        <p class="text-blue-500 font-light text-lg tracking-widest">Contacto</p>
-        <h2 class="text-6xl font-bold mb-5">Hagamos una web única juntos.</h2>
-        <p class="text-gray-600 dark:text-gray-300">Hablemos de tu idea y empecemos a construir una web que te ayude a crecer</p>
-    </header>
+        <!--Email-->
+        <label class="flex flex-col gap-y-2">
+          <span class="text-xs font-semibold text-gray-600/80 dark:text-gray-300/50">Email</span>
+          <input
+            type="email"
+            name="email"
+            placeholder="tu@email.com"
+            class="border-b border-gray-300 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-blue-500 focus:ring-0 transition-colors duration-200 pb-2"
+            required
+          />
+        </label>
 
-    <!--Layout Bento Grid -->
-    <div class="max-w-5xl min-h-[50dvh] mx-auto grid grid-cols-[1.3fr_0.7fr] mt-10 gap-6 px-4">
+        <!--Servicio-->
+        <label class="flex flex-col gap-y-2">
+          <span class="text-xs font-semibold text-gray-600/80 dark:text-gray-300/50">Servicio</span>
+          <select
+            name="service"
+            class="border-b border-gray-300 text-gray-900 dark:text-white focus:outline-none focus:ring-0 focus:border-blue-500 transition-all duration-200 pb-2 cursor-pointer w-full"
+            required
+          >
+            <option
+              value=""
+              disabled
+              selected
+              >Selecciona un servicio</option
+            >
+            <option
+              value="landing-pages"
+              class="dark:text-black"
+              >Landing page / Portfolio</option
+            >
+            <option
+              value="web-redesign"
+              class="dark:text-black"
+              >Rediseño web y optimización</option
+            >
+            <option
+              value="other"
+              class="dark:text-black"
+              >Otro</option
+            >
+          </select>
+        </label>
 
+        <!--Presupuesto-->
+        <label class="flex flex-col gap-y-2">
+          <span class="text-xs font-semibold text-gray-600/80 dark:text-gray-300/50"
+            >Presupuesto aproximado</span
+          >
+          <select
+            name="budget"
+            class="border-b border-gray-300 text-gray-900 dark:text-white focus:outline-none focus:ring-0 focus:border-blue-500 transition-colors bg-transparent duration-200 pb-2 cursor-pointer w-full"
+            required
+          >
+            <option
+              value=""
+              disabled
+              selected
+              >Selecciona un rango</option
+            >
+            <option
+              value="150-250"
+              class="dark:text-black"
+              >$150 - $250 USD</option
+            >
+            <option
+              value="250-350"
+              class="dark:text-black"
+              >$250 - $350 USD</option
+            >
+            <option
+              value="350-450"
+              class="dark:text-black"
+              >$350 - $450 USD</option
+            >
+          </select>
+        </label>
 
-        <!--Formulario -->
-        <div class="border border-gray-500/20 shadow-xs shadow-gray-500/20 rounded-xl row-span-2 p-6">
-
-            <header class="space-y-2">
-                    
-                <h3 class="font-semibold text-xl mb-2 flex items-center gap-x-2 ">
-                    <span class="w-1.5 h-6 bg-blue-500 rounded-full"></span>
-                    Iniciemos tu proyecto
-                </h3>
-                <p class="text-gray-600 text-sm dark:text-gray-300">
-                    Completa el formulario y nos pondremos en contacto contigo en menos de 20 minutos
-                </p>
-            </header>
-
-            <form id="contact-form" action="https://formspree.io/f/mpqjwqlg" method="POST" class="mt-10 grid grid-cols-2 gap-x-8 gap-y-9">
-
-                <!--Nombre-->
-                <label class="flex flex-col gap-y-2">
-                    <span class="text-xs font-semibold text-gray-600/80 dark:text-gray-300/50">Nombre completo</span>
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Tu nombre"
-                        class="border-b border-gray-300 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-blue-500 focus:ring-0 transition-colors duration-200 pb-2"
-                        required
-                    >
-                </label>
-
-                <!--Email-->
-                <label class="flex flex-col gap-y-2">
-                    <span class="text-xs font-semibold text-gray-600/80 dark:text-gray-300/50">Email</span>
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="tu@email.com"
-                        class="border-b border-gray-300 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-blue-500 focus:ring-0 transition-colors duration-200 pb-2"
-                        required
-                    >
-                </label>
-
-                <!--Servicio-->
-                <label class="flex flex-col gap-y-2">
-                    <span class="text-xs font-semibold text-gray-600/80 dark:text-gray-300/50">Servicio</span>
-                    <select name="service" class="border-b border-gray-300 text-gray-900 dark:text-white focus:outline-none focus:ring-0 focus:border-blue-500 transition-all  duration-200 pb-2 cursor-pointer w-full" required>
-                        <option value="" disabled selected>Selecciona un servicio</option>
-                        <option value="landing-pages" class=" dark:text-black">Landing page / Portfolio</option>
-                        <option value="web-redesign" class=" dark:text-black">Rediseño web y optimización</option>
-                        <option value="other" class=" dark:text-black">Otro</option>
-                    </select>
-                </label>
-
-                <!--Presupuesto-->
-                <label class="flex flex-col gap-y-2">
-                    <span class="text-xs font-semibold text-gray-600/80 dark:text-gray-300/50">Presupuesto aproximado</span>
-                    <select name="budget" class="border-b border-gray-300 text-gray-900 dark:text-white focus:outline-none focus:ring-0 focus:border-blue-500 transition-colors bg-transparent duration-200 pb-2 cursor-pointer w-full" required>
-                        <option value="" disabled selected>Selecciona un rango</option>
-                        <option value="150-250" class="dark:text-black">$150 - $250 USD</option>
-                        <option value="250-350" class="dark:text-black">$250 - $350 USD</option>
-                        <option value="350-450" class="dark:text-black">$350 - $450 USD</option>
-                    </select>
-                </label>
-
-                <!--Proyecto-->
-                <label class="flex flex-col gap-y-2 col-span-2">
-                    <span class="text-xs font-semibold text-gray-600/80 dark:text-gray-300/50">¿De qué trata tu proyecto?</span>
-                    <textarea
-                        name="project"
-                        rows="3"
-                        placeholder="Contanos brevemente tu idea, objetivos o qué tipo de web necesitás..."
-                        class="border border-gray-300/40 bg-gray-100/80 dark:bg-gray-800/10 dark:border-gray-700/20 dark:text-white rounded-lg px-3 py-2.5 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/20 transition-colors duration-200 resize-none"
-                        required
-                    ></textarea>
-                </label>
-                <div class="col-span-2 flex flex-col items-start gap-4 pt-2">
-                    <button type="submit" id="submit-btn" class="px-6 py-3 flex items-center gap-x-2 bg-blue-500 text-white font-semibold text-sm rounded-lg hover:bg-blue-600 active:bg-blue-700 cursor-pointer transition-colors group duration-200">
-                        Enviar consulta
-                        <RightArrowIcon class="size-5 text-white shrink-0 ml-auto group-hover:translate-x-1 transition-all duration-200" />
-                    </button>
-                    <p id="form-status" class="text-sm hidden"></p>
-                    <p class="text-xs text-gray-500">Sin compromiso. Te respondemos en menos de 24 horas.</p>
-                </div>
-            </form>
-
-            <script>
-                const form = document.getElementById('contact-form') as HTMLFormElement
-                const status = document.getElementById('form-status') as HTMLParagraphElement
-                const btn = document.getElementById('submit-btn') as HTMLButtonElement
-
-                form.addEventListener('submit', async (e) => {
-                    e.preventDefault()
-
-                    btn.disabled = true
-                    btn.textContent = 'Enviando...'
-                    status.classList.add('hidden')
-
-                    const response = await fetch(form.action, {
-                        method: 'POST',
-                        body: new FormData(form),
-                        headers: { 'Accept': 'application/json' }
-                    })
-
-                    if (response.ok) {
-                        status.textContent = '¡Mensaje enviado! Te respondo en menos de 24 horas.'
-                        status.className = 'text-sm text-green-600 font-medium'
-                        form.reset()
-                    } else {
-                        status.textContent = 'Hubo un error. Intentá de nuevo o escribime por WhatsApp.'
-                        status.className = 'text-sm text-red-500 font-medium'
-                    }
-
-                    btn.disabled = false
-                    btn.textContent = 'Enviar consulta'
-                })
-            </script>
+        <!--Proyecto-->
+        <label class="flex flex-col gap-y-2 sm:col-span-2">
+          <span class="text-xs font-semibold text-gray-600/80 dark:text-gray-300/50"
+            >¿De qué trata tu proyecto?</span
+          >
+          <textarea
+            name="project"
+            rows="3"
+            placeholder="Contanos brevemente tu idea, objetivos o qué tipo de web necesitás..."
+            class="border border-gray-300/40 bg-gray-100/80 dark:bg-gray-800/10 dark:border-gray-700/20 dark:text-white rounded-lg px-3 py-2.5 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/20 transition-colors duration-200 resize-none"
+            required
+          ></textarea>
+        </label>
+        <div class="sm:col-span-2 flex flex-col items-start gap-4 pt-2">
+          <button
+            type="submit"
+            id="submit-btn"
+            class="px-6 py-3 flex items-center gap-x-2 bg-blue-500 text-white font-semibold text-sm rounded-lg hover:bg-blue-600 active:bg-blue-700 cursor-pointer transition-colors group duration-200"
+          >
+            Enviar consulta
+            <RightArrowIcon
+              class="size-5 text-white shrink-0 ml-auto group-hover:translate-x-1 transition-all duration-200"
+            />
+          </button>
+          <p
+            id="form-status"
+            class="text-sm hidden"
+          >
+          </p>
+          <p class="text-xs text-gray-500">Sin compromiso. Te respondemos en menos de 24 horas.</p>
         </div>
+      </form>
 
-        <!--Contacto directo-->
-        <div class="border border-gray-500/20 shadow-xs shadow-gray-500/20 rounded-xl p-6 space-y-3">
-            <header>
-                <h3 class="font-semibold text-xl mb-2">
-                    Nuestro <span class="text-blue-500">contacto directo</span>
-                </h3>
-                <p class="text-gray-600 dark:text-gray-300 text-sm">
-                    Respuesta en menos de 20 minutos
-                </p>
-            </header>
-            <ul class="space-y-5">
-                <!--WhatsApp-->
-                <li>
-                    <a href="https://wa.me/5492364373183?text=Hola,%20quiero%20hacer%20una%20consulta" target="_blank" rel="noopener noreferrer" class="flex items-center gap-x-2 bg-gray-100/80 dark:bg-gray-600/10 dark:hover:bg-gray-700/10 rounded-xl p-3 w-76 group hover:bg-gray-200/80 transition-all duration-200">
-                        <div class="p-2 bg-gray-200/80 dark:bg-gray-600/20 rounded-xl shrink-0 group-hover:bg-emerald-500/20 transition-colors duration-200">
-                            <WhatsAppIcon class="size-6 text-gray-500 group-hover:text-emerald-600 transition-colors duration-200" />
-                        </div>
-                        <div class="space-y-1 flex flex-col">
-                            <span class="text-sm font-medium text-gray-700 dark:text-gray-300 min-w-0">
-                                WhatsApp
-                            </span>
-                            <span class="text-xs text-gray-500 dark:text-gray-100/30 min-w-0">
-                                +54 9 2364 373183
-                            </span>
-                        </div>
-                        <RightArrowIcon class="size-5 text-gray-400 shrink-0 ml-auto group-hover:text-emerald-600 group-hover:translate-x-1 transition-all duration-200" />
-                    </a>
-                </li>
-                <!--Email-->
-                <li>
-                    <a href="mailto:velarbusines@gmail.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-x-2 bg-gray-100/80 rounded-xl p-3 w-76 group hover:bg-gray-200/80 dark:bg-gray-600/10 dark:hover:bg-gray-700/10 transition-all duration-200">
+      <script>
+        const form = document.getElementById('contact-form') as HTMLFormElement
+        const status = document.getElementById('form-status') as HTMLParagraphElement
+        const btn = document.getElementById('submit-btn') as HTMLButtonElement
 
-                        <div class="p-2 bg-gray-200/80 dark:bg-gray-600/20 rounded-xl shrink-0 group-hover:bg-blue-500/20 transition-colors duration-200">
-                            <MailIcon class="size-6 text-gray-500  group-hover:text-blue-600 transition-colors duration-200" />
-                        </div>
-                        <div class="space-y-1 flex flex-col">
-                            <span class="text-sm font-medium text-gray-700 dark:text-gray-300 min-w-0">
-                                Email directo
-                            </span>
-                            <span class="text-xs text-gray-500 dark:text-gray-100/30 min-w-0">
-                                velarbusines@gmail.com
-                            </span>
-                        </div>
-                        <RightArrowIcon class="size-5 text-gray-400 shrink-0 ml-auto group-hover:text-blue-600 group-hover:translate-x-1 transition-all duration-200" />
-                    </a>
-                </li>
-            </ul>
-        </div>
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault()
 
-        <div class="border border-gray-500/20 shadow-xs shadow-gray-500/20 rounded-xl p-6 space-y-3">
-            <header>
-                <h3 class="font-semibold text-xl mb-2">
-                    Lo que <span class="text-blue-500">ofrecemos</span>
-                </h3>
-                <p class="text-gray-600 dark:text-gray-300 text-sm mb-6">
-                    Nuestra promesa es que tu proyecto sea un éxito.
-                </p>
-            </header>
-            <ul class="space-y-6">
+          btn.disabled = true
+          btn.textContent = 'Enviando...'
+          status.classList.add('hidden')
 
-                <li class="flex items-center gap-x-4">
-                    <div class="p-2 bg-blue-500/10 rounded-xl shrink-0 w-fit">
-                        <CodeIcon class="size-6 text-blue-500" />
-                    </div>
-                    <div>
-                        <p class="font-semibold text-sm">
-                            SEO Optimizado
-                        </p>
-                        <p class="text-gray-500 text-xs">
-                            Optimización de alto rendimiento.
-                        </p>
-                    </div>
-                </li>
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { Accept: 'application/json' },
+          })
 
-                <li class="flex items-center gap-x-4">
-                    <div class="p-2 bg-blue-500/10 rounded-xl shrink-0 w-fit">
-                        <HostingIcon class="size-6 text-blue-500" />
-                    </div>
-                    <div>
-                        <p class="font-semibold text-sm">
-                            Hosting gratuito
-                        </p>
-                        <p class="text-gray-500 text-xs">
-                            Mantenimiento y alojamiento de alta calidad.
-                        </p>
-                    </div>
-                </li>
-                
-                <li class="flex items-center gap-x-4">
-                    <div class="p-2 bg-blue-500/10 rounded-xl shrink-0 w-fit">
-                        <DesignIcon class="size-6 text-blue-500" />
-                    </div>
-                    <div>
-                        <p class="font-semibold text-sm">
-                            Revisiones ilimitadas
-                        </p>
-                        <p class="text-gray-500 text-xs">
-                            Revisiones de diseño para que sea lo que estés buscando.
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </div>
+          if (response.ok) {
+            status.textContent = '¡Mensaje enviado! Te respondo en menos de 24 horas.'
+            status.className = 'text-sm text-green-600 font-medium'
+            form.reset()
+          } else {
+            status.textContent = 'Hubo un error. Intentá de nuevo o escribime por WhatsApp.'
+            status.className = 'text-sm text-red-500 font-medium'
+          }
 
-        
+          btn.disabled = false
+          btn.textContent = 'Enviar consulta'
+        })
+      </script>
     </div>
+
+    <!--Contacto directo-->
+    <div
+      class="border border-gray-500/20 shadow-xs shadow-gray-500/20 rounded-xl p-5 sm:p-6 space-y-3 min-w-0"
+    >
+      <header>
+        <h3 class="font-semibold text-xl mb-2">
+          Nuestro <span class="text-blue-500">contacto directo</span>
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">Respuesta en menos de 20 minutos</p>
+      </header>
+      <ul class="space-y-5">
+        <!--WhatsApp-->
+        <li>
+          <a
+            href="https://wa.me/5492364373183?text=Hola,%20quiero%20hacer%20una%20consulta"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-x-2 bg-gray-100/80 dark:bg-gray-600/10 dark:hover:bg-gray-700/10 rounded-xl p-3 w-full min-w-0 group hover:bg-gray-200/80 transition-all duration-200"
+          >
+            <div
+              class="p-2 bg-gray-200/80 dark:bg-gray-600/20 rounded-xl shrink-0 group-hover:bg-emerald-500/20 transition-colors duration-200"
+            >
+              <WhatsAppIcon
+                class="size-6 text-gray-500 group-hover:text-emerald-600 transition-colors duration-200"
+              />
+            </div>
+            <div class="space-y-1 flex flex-col">
+              <span class="text-sm font-medium text-gray-700 dark:text-gray-300 min-w-0">
+                WhatsApp
+              </span>
+              <span class="text-xs text-gray-500 dark:text-gray-100/30 min-w-0">
+                +54 9 2364 373183
+              </span>
+            </div>
+            <RightArrowIcon
+              class="size-5 text-gray-400 shrink-0 ml-auto group-hover:text-emerald-600 group-hover:translate-x-1 transition-all duration-200"
+            />
+          </a>
+        </li>
+        <!--Email-->
+        <li>
+          <a
+            href="mailto:velarbusines@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-x-2 bg-gray-100/80 rounded-xl p-3 w-full min-w-0 group hover:bg-gray-200/80 dark:bg-gray-600/10 dark:hover:bg-gray-700/10 transition-all duration-200"
+          >
+            <div
+              class="p-2 bg-gray-200/80 dark:bg-gray-600/20 rounded-xl shrink-0 group-hover:bg-blue-500/20 transition-colors duration-200"
+            >
+              <MailIcon
+                class="size-6 text-gray-500 group-hover:text-blue-600 transition-colors duration-200"
+              />
+            </div>
+            <div class="space-y-1 flex flex-col">
+              <span class="text-sm font-medium text-gray-700 dark:text-gray-300 min-w-0">
+                Email directo
+              </span>
+              <span class="text-xs text-gray-500 dark:text-gray-100/30 min-w-0">
+                velarbusines@gmail.com
+              </span>
+            </div>
+            <RightArrowIcon
+              class="size-5 text-gray-400 shrink-0 ml-auto group-hover:text-blue-600 group-hover:translate-x-1 transition-all duration-200"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div
+      class="border border-gray-500/20 shadow-xs shadow-gray-500/20 rounded-xl p-5 sm:p-6 space-y-3 min-w-0"
+    >
+      <header>
+        <h3 class="font-semibold text-lg sm:text-xl mb-2">
+          Lo que <span class="text-blue-500">ofrecemos</span>
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm mb-6">
+          Nuestra promesa es que tu proyecto sea un éxito.
+        </p>
+      </header>
+      <ul class="space-y-6">
+        <li class="flex items-center gap-x-4">
+          <div class="p-2 bg-blue-500/10 rounded-xl shrink-0 w-fit">
+            <CodeIcon class="size-6 text-blue-500" />
+          </div>
+          <div>
+            <p class="font-semibold text-sm">SEO Optimizado</p>
+            <p class="text-gray-500 text-xs">Optimización de alto rendimiento.</p>
+          </div>
+        </li>
+
+        <li class="flex items-center gap-x-4">
+          <div class="p-2 bg-blue-500/10 rounded-xl shrink-0 w-fit">
+            <HostingIcon class="size-6 text-blue-500" />
+          </div>
+          <div>
+            <p class="font-semibold text-sm">Hosting gratuito</p>
+            <p class="text-gray-500 text-xs">Mantenimiento y alojamiento de alta calidad.</p>
+          </div>
+        </li>
+
+        <li class="flex items-center gap-x-4">
+          <div class="p-2 bg-blue-500/10 rounded-xl shrink-0 w-fit">
+            <DesignIcon class="size-6 text-blue-500" />
+          </div>
+          <div>
+            <p class="font-semibold text-sm">Revisiones ilimitadas</p>
+            <p class="text-gray-500 text-xs">
+              Revisiones de diseño para que sea lo que estés buscando.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </section>
