@@ -3,12 +3,6 @@ import { defineConfig } from 'astro/config'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  output: 'static',
-
-  srcDir: './src',
-  publicDir: './public',
-  outDir: './dist',
-
   vite: {
     plugins: [tailwindcss()],
     build: {
@@ -17,6 +11,5 @@ export default defineConfig({
       assetsInlineLimit: 4096,
     },
   },
-
   compressHTML: true,
 })
