@@ -30,11 +30,9 @@ const SelectedIcon = icons.get(icon) || WebIcon
   data-reveal
   style={`transition-delay: ${delay * 0.1}s`}
   class:list={[
-    'relative border gap-5 sm:gap-6 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 grid grid-rows-[auto_1fr_auto] hover:-translate-y-0.5 hover:shadow-lg group min-w-0',
+    'relative border gap-5 border-black/20 dark:border-white/20 hover:border-black/20 dark:hover:border-white/15 sm:gap-6  p-6 sm:p-8 lg:p-10 grid grid-rows-[auto_1fr_auto] hover:shadow-lg group min-w-0',
     {
-      'bg-black border-blue-500/20 shadow-sm shadow-blue-500/5 dark:shadow-blue-500/10': featured,
-      'bg-white/95 dark:bg-white/4 border-black/10 dark:border-white/10 hover:border-black/20 dark:hover:border-white/15':
-        !featured,
+      ' md:-translate-y-10  shadow-sm ': featured,
     },
   ]}
 >
@@ -53,7 +51,7 @@ const SelectedIcon = icons.get(icon) || WebIcon
       class:list={[
         'inline-flex p-3 rounded-2xl transition-colors duration-200',
         {
-          'bg-blue-500/10 group-hover:bg-blue-500/20': featured,
+          'bg-blue-700/20   dark:bg-blue-500/10 group-hover:bg-blue-700/30 dark:group-hover:bg-blue-500/20': featured,
           'bg-gray-200/60 group-hover:bg-gray-300/60 dark:bg-white/5 dark:group-hover:bg-white/10':
             !featured,
         },
@@ -63,7 +61,7 @@ const SelectedIcon = icons.get(icon) || WebIcon
         class:list={[
           'size-8',
           {
-            'text-blue-400': featured,
+            'text-blue-700': featured,
             'text-black dark:text-white': !featured,
           },
         ]}
@@ -74,7 +72,6 @@ const SelectedIcon = icons.get(icon) || WebIcon
       class:list={[
         'text-xl sm:text-2xl min-h-0 sm:min-h-16 font-semibold my-3 sm:my-4 text-balanced',
         {
-          'text-white': featured,
           'text-black/90 dark:text-white/90': !featured,
         },
       ]}
@@ -84,11 +81,7 @@ const SelectedIcon = icons.get(icon) || WebIcon
 
     <p
       class:list={[
-        'leading-relaxed',
-        {
-          'text-white/70': featured,
-          'text-gray-600 dark:text-gray-400': !featured,
-        },
+        'leading-relaxed text-gray-600 dark:text-gray-400'
       ]}
     >
       {description}
@@ -102,20 +95,12 @@ const SelectedIcon = icons.get(icon) || WebIcon
           <li class="flex items-start gap-x-3">
             <TickIcon
               class:list={[
-                'mt-0.5 inline-block size-4 shrink-0',
-                {
-                  'text-blue-400': featured,
-                  'text-blue-500': !featured,
-                },
+                'mt-0.5 inline-block size-4 shrink-0 text-blue-500',
               ]}
             />
             <span
               class:list={[
-                'text-[15px] leading-relaxed',
-                {
-                  'text-white/80': featured,
-                  'text-gray-700 dark:text-gray-300': !featured,
-                },
+                'text-[15px] leading-relaxed text-gray-700 dark:text-gray-300',
               ]}
             >
               {feature}
@@ -130,20 +115,14 @@ const SelectedIcon = icons.get(icon) || WebIcon
     <hr
       class:list={[
         'border-0 h-px w-full mb-6',
-        {
-          'bg-white/10': featured,
-          'bg-gray-200 dark:bg-white/10': !featured,
-        },
+        'bg-gray-200 dark:bg-white/10',
       ]}
     />
 
     <p
       class:list={[
         'text-sm font-medium mb-1',
-        {
-          'text-gray-400': featured,
-          'text-gray-500': !featured,
-        },
+        'text-gray-500',
       ]}
     >
       Desde
@@ -153,40 +132,28 @@ const SelectedIcon = icons.get(icon) || WebIcon
       <span
         class:list={[
           'text-3xl sm:text-4xl font-extrabold tracking-tight',
-          {
-            'text-white': featured,
-            'text-black/90 dark:text-white/90': !featured,
-          },
+          'text-black/90 dark:text-white/90',
         ]}>${discountPrice}</span
       >
 
       <span
         class:list={[
           'text-sm font-medium',
-          {
-            'text-gray-400': featured,
-            'text-gray-500': !featured,
-          },
+          'text-gray-500',
         ]}>/{currency}</span
       >
 
       <span
         class:list={[
           'text-sm line-through',
-          {
-            'text-gray-500': featured,
-            'text-gray-400': !featured,
-          },
+          'text-gray-400',
         ]}>${originalPrice}</span
       >
 
       <span
         class:list={[
           'rounded-md py-0.5 px-1.5 text-xs font-bold',
-          {
-            'bg-blue-500/20 text-blue-300': featured,
-            'bg-blue-100 text-blue-600 dark:bg-blue-500/15 dark:text-blue-400': !featured,
-          },
+          'bg-blue-100 text-blue-600 dark:bg-blue-500/15 dark:text-blue-400',
         ]}>-{discount}%</span
       >
     </div>

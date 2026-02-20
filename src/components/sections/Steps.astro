@@ -53,7 +53,7 @@ const steps = [
     </header>
 
     <ol
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-8 sm:mt-10 gap-6 sm:gap-8 list-none"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border sm:divide-x divide-y lg:divide-y-0 divide-black/20 dark:divide-white/20 border-black/20 dark:border-white/20 mt-8 sm:mt-10 list-none"
       aria-label="Pasos del proceso"
     >
       {steps.map((step) => <StepItem {...step} />)}
