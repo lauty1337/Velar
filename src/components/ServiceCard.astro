@@ -30,7 +30,7 @@ const SelectedIcon = icons.get(icon) || WebIcon
   data-reveal
   style={`transition-delay: ${delay * 0.1}s`}
   class:list={[
-    'relative border gap-5 border-black/20 dark:border-white/20 hover:border-black/20 dark:hover:border-white/15 sm:gap-6  p-6 sm:p-8 lg:p-10 grid grid-rows-[auto_1fr_auto] hover:shadow-lg group min-w-0',
+    'relative border gap-5 border-black/20 dark:border-white/20 hover:border-black/20 dark:hover:border-white/15 sm:gap-6  p-4 sm:p-6 lg:p-10 grid grid-rows-[auto_auto_1fr_auto] md:grid-rows-subgrid md:row-span-4 hover:shadow-lg group min-w-0 h-full',
     {
       ' md:-translate-y-10  shadow-sm ': featured,
     },
@@ -40,16 +40,16 @@ const SelectedIcon = icons.get(icon) || WebIcon
     featured && (
       <div class="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
         <div class="px-4 py-1 rounded-full bg-linear-to-r from-blue-500 to-blue-700 shadow-lg shadow-blue-500/25">
-          <span class="text-xs font-bold text-white uppercase tracking-wider">Más Popular</span>
+          <span class="text-xs font-bold text-white uppercase tracking-tight">Más Popular</span>
         </div>
       </div>
     )
   }
 
-  <header>
+  <header class="flex items-center gap-x-3 ">
     <div
       class:list={[
-        'inline-flex p-3 rounded-2xl transition-colors duration-200',
+        'inline-flex  p-3 rounded-2xl transition-colors duration-200 justify-center items-center',
         {
           'bg-blue-700/20   dark:bg-blue-500/10 group-hover:bg-blue-700/30 dark:group-hover:bg-blue-500/20': featured,
           'bg-gray-200/60 group-hover:bg-gray-300/60 dark:bg-white/5 dark:group-hover:bg-white/10':
@@ -59,7 +59,7 @@ const SelectedIcon = icons.get(icon) || WebIcon
     >
       <SelectedIcon
         class:list={[
-          'size-8',
+          'size-8 ',
           {
             'text-blue-700': featured,
             'text-black dark:text-white': !featured,
@@ -68,9 +68,10 @@ const SelectedIcon = icons.get(icon) || WebIcon
       />
     </div>
 
+    <div class="flex flex-col ">
     <h3
       class:list={[
-        'text-xl sm:text-2xl min-h-0 sm:min-h-16 font-semibold my-3 sm:my-4 text-balanced',
+        'text-xl sm:text-xl min-h-0  font-semibold my-0 sm:my-0 text-balanced',
         {
           'text-black/90 dark:text-white/90': !featured,
         },
@@ -81,18 +82,49 @@ const SelectedIcon = icons.get(icon) || WebIcon
 
     <p
       class:list={[
-        'leading-relaxed text-gray-600 dark:text-gray-400'
+        'leading-relaxed mt-0.5 text-gray-600 text-xs dark:text-gray-400'
       ]}
     >
-      {description}
-    </p>
+        {description}
+      </p>
+    </div>
   </header>
 
-  <main class="pt-4">
-    <ul class="flex flex-col gap-2.5">
+  <div class="flex flex-wrap border-b border-black/20 dark:border-white/20 items-baseline gap-x-2 pb-4 sm:pb-5">
+    <span
+      class:list={[
+        'text-3xl font-serif sm:text-4xl font-extrabold tracking-tight',
+        'text-black/90 dark:text-white/90',
+      ]}>${discountPrice}</span
+    >
+
+    <span
+      class:list={[
+        'text-sm font-medium',
+        'text-gray-500',
+      ]}>/{currency}</span
+    >
+
+    <span
+      class:list={[
+        'text-sm line-through',
+        'text-gray-400',
+      ]}>${originalPrice}</span
+    >
+
+    <span
+      class:list={[
+        'rounded-md py-0.5 px-1.5 text-xs font-bold',
+        'bg-blue-100 text-blue-600 dark:bg-blue-500/15 dark:text-blue-400',
+      ]}>-{discount}%</span
+    >
+  </div>
+
+  <main>
+    <ul class="flex flex-col divide-y divide-black/20 dark:divide-white/20 gap-2.5">
       {
         safeFeatures.map((feature) => (
-          <li class="flex items-start gap-x-3">
+          <li class="flex items-start gap-x-3 py-3">
             <TickIcon
               class:list={[
                 'mt-0.5 inline-block size-4 shrink-0 text-blue-500',
@@ -100,7 +132,7 @@ const SelectedIcon = icons.get(icon) || WebIcon
             />
             <span
               class:list={[
-                'text-[15px] leading-relaxed text-gray-700 dark:text-gray-300',
+                'text-sm leading-relaxed text-gray-700 dark:text-gray-300',
               ]}
             >
               {feature}
@@ -119,49 +151,11 @@ const SelectedIcon = icons.get(icon) || WebIcon
       ]}
     />
 
-    <p
-      class:list={[
-        'text-sm font-medium mb-1',
-        'text-gray-500',
-      ]}
-    >
-      Desde
-    </p>
-
-    <div class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-      <span
-        class:list={[
-          'text-3xl sm:text-4xl font-extrabold tracking-tight',
-          'text-black/90 dark:text-white/90',
-        ]}>${discountPrice}</span
-      >
-
-      <span
-        class:list={[
-          'text-sm font-medium',
-          'text-gray-500',
-        ]}>/{currency}</span
-      >
-
-      <span
-        class:list={[
-          'text-sm line-through',
-          'text-gray-400',
-        ]}>${originalPrice}</span
-      >
-
-      <span
-        class:list={[
-          'rounded-md py-0.5 px-1.5 text-xs font-bold',
-          'bg-blue-100 text-blue-600 dark:bg-blue-500/15 dark:text-blue-400',
-        ]}>-{discount}%</span
-      >
-    </div>
 
     <a
       href="#contact"
       class:list={[
-        'font-semibold border flex p-3 sm:p-4 mt-5 sm:mt-6 rounded-xl sm:rounded-2xl text-center justify-center items-center gap-2 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 text-sm sm:text-base',
+        'font-semibold border flex p-3 sm:p-4 mt-5 sm:mt-6 rounded-xl sm:rounded-2xl text-center justify-center items-center gap-2 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 text-sm sm:text-base ',
         {
           'bg-blue-600 text-white border-blue-600 hover:bg-blue-700 hover:border-blue-700 focus-visible:ring-offset-black':
             featured,
@@ -171,19 +165,7 @@ const SelectedIcon = icons.get(icon) || WebIcon
       ]}
     >
       Solicitar cotización
-      <svg
-        class="size-4 transition-transform duration-200 group-hover:translate-x-0.5"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="2.5"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-        ></path>
-      </svg>
+      <svg fill="none" stroke="currentColor" stroke-width="2.5" class="size-4 transition-transform duration-200 group-hover:translate-x-0.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
     </a>
   </footer>
 </article>

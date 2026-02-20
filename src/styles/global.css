@@ -6,9 +6,10 @@
 @theme {
   --font-sans: 'Plus Jakarta Sans Variable', system-ui, sans-serif;
   --font-serif: 'Orbitron Variable', sans-serif;
+  --breakpoint-xs: 400px;
 }
 
-/* Evitar texto invisible durante la carga de fonts */
+
 @font-face {
   font-family: 'Plus Jakarta Sans Variable';
   font-display: swap;
