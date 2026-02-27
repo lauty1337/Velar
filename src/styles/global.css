@@ -1,11 +1,9 @@
 @import 'tailwindcss';
 @import 'tailwind-animations';
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme {
   --font-sans: 'Plus Jakarta Sans Variable', system-ui, sans-serif;
-  --font-serif: 'Orbitron Variable', sans-serif;
+  --font-serif: 'Space Grotesk Variable', serif;
   --breakpoint-xs: 400px;
 }
 
@@ -15,10 +13,6 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Orbitron Variable';
-  font-display: swap;
-}
 
 [data-reveal] {
   opacity: 0;

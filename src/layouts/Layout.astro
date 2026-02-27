@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css'
 import '@fontsource-variable/plus-jakarta-sans'
+import '@fontsource-variable/space-grotesk';
 import Header from '../components/sections/Header.astro'
 import Footer from '../components/sections/Footer.astro'
 ---
@@ -17,7 +18,7 @@ import Footer from '../components/sections/Footer.astro'
       content="width=device-width, initial-scale=1"
     />
 
-    <!-- DNS prefetch para recursos externos -->
+    
     <link
       rel="dns-prefetch"
       href="https://formspree.io"
@@ -28,16 +29,7 @@ import Footer from '../components/sections/Footer.astro'
       crossorigin
     />
 
-    <!-- Theme: inline para evitar FOUC -->
-    <script is:inline>
-      ;(function () {
-        var t = localStorage.getItem('theme')
-        var dark =
-          t === 'dark' ||
-          (t !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)
-        if (dark) document.documentElement.classList.add('dark')
-      })()
-    </script>
+    
 
     <title>Velar - Desarrollo Web Front-End y Diseño UI</title>
 
@@ -64,16 +56,14 @@ import Footer from '../components/sections/Footer.astro'
       <slot />
     </main>
     <Footer />
+
+
+
+
     <script>
       import '../scripts/data-reveal.js'
       import { initLenis } from '../scripts/lenis.js'
       initLenis()
-
-      // Orbitron: diferida (solo decorativa, no crítica para FCP)
-      const loadOrbitron = () => import('@fontsource-variable/orbitron' as any)
-      'requestIdleCallback' in window
-        ? requestIdleCallback(loadOrbitron)
-        : setTimeout(loadOrbitron, 100)
     </script>
   </body>
 </html>

@@ -149,11 +149,11 @@ const SelectedIcon = icons.get(icon) || WebIcon
     <a
       href="#contact"
       class:list={[
-        'font-semibold border flex p-3 sm:p-4 mt-5 sm:mt-6 rounded-xl sm:rounded-2xl text-center justify-center items-center gap-2 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 text-sm sm:text-base ',
+        'font-semibold border flex p-3 sm:p-4 mt-5 sm:mt-6 rounded-sm text-center justify-center items-center gap-2 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 text-sm sm:text-base ',
         {
-          'bg-blue-600 text-white border-blue-600 hover:bg-blue-700 hover:border-blue-700 focus-visible:ring-offset-black':
+          'bg-blue-600 text-white border-blue-600 shadow-md shadow-blue-600/20 hover:bg-blue-700 hover:border-blue-700 focus-visible:ring-offset-black':
             featured,
-          'border-black/15 text-black/90 bg-transparent hover:bg-gray-100 hover:border-black/25 dark:border-white/15 dark:text-white dark:hover:bg-white/5 dark:hover:border-white/25 dark:focus-visible:ring-offset-gray-900':
+          'border-black/15 text-black/90 bg-transparent hover:bg-gray-100 hover:border-black/25 shadow-md shadow-black/10 dark:border-white/15 dark:text-white dark:hover:bg-white/5 dark:hover:border-white/25 dark:focus-visible:ring-offset-gray-900':
             !featured,
         },
       ]}
