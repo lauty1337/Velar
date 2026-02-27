@@ -23,13 +23,13 @@ const SelectedIcon = icons.get(icon) || CodeIcon
 >
   <span
     aria-hidden="true"
-    class="absolute top-3 right-3 text-4xl sm:text-5xl lg:text-6xl font-extrabold font-serif text-blue-500/15 dark:text-blue-500/5 select-none"
+    class="absolute top-3 right-3 text-4xl sm:text-5xl lg:text-6xl font-extrabold font-serif text-blue-500/5 select-none"
   >
     {step}
   </span>
   <div class="relative z-10 flex flex-col h-full items-center text-center">
     <div
-      class="bg-blue-200/40 dark:bg-blue-900/40 p-2 rounded-xl sm:rounded-2xl w-fit mt-12 sm:mt-14 lg:mt-18"
+      class="bg-blue-900/40 p-2 rounded-xl sm:rounded-2xl w-fit mt-12 sm:mt-14 lg:mt-18"
     >
       <SelectedIcon
         class="size-7 sm:size-8 text-blue-500"
@@ -39,7 +39,7 @@ const SelectedIcon = icons.get(icon) || CodeIcon
     <h3 class="text-xl sm:text-2xl font-bold my-4 sm:my-5">
       {title}
     </h3>
-    <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed">
+    <p class="text-gray-400 font-serif text-sm sm:text-base leading-relaxed">
       {description}
     </p>
   </div>
