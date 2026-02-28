@@ -13,6 +13,10 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Space Grotesk Variable';
+  font-display: swap;
+}
 
 [data-reveal] {
   opacity: 0;
